@@ -45,7 +45,7 @@
 import { designProps } from '@/mixins/design'
 
 export default {
-  name: 'EllipseBackgound',
+  name: 'EllipseBackground',
   mixins: [designProps]
 }
 </script>

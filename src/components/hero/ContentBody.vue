@@ -1,16 +1,8 @@
 <template>
   <base-card :color="bgColour">
-    <v-container fluid>
-      <v-row>
-        <slot/>
-
-        <v-col>
-          <slot name="title"/>
-          <slot name="subtitle"/>
-          <slot name="scroll-icon"/>
-        </v-col>
-      </v-row>
-    </v-container>
+    <slot name="title"/>
+    <slot name="subtitle"/>
+    <slot name="scroll-icon"/>
   </base-card>
 </template>
 

@@ -4,8 +4,6 @@
 
     <v-container class="pa-0" fluid>
       <content-body class="pt-12" :bg-colour="black">
-        <ellipse-backgound :txt-colour="white"/>
-
         <template v-slot:title>
           <v-row justify="center" class="my-12">
             <h1 class="hero-title font-weight-bold custom-white">
@@ -35,12 +33,10 @@ import NavBar from '@/components/hero/navbar/Main'
 import ContentBody from '@/components/hero/ContentBody'
 import { palette } from '@/mixins/design'
 import ScrollIcon from '@/components/hero/svgs/ScrollIcon'
-import EllipseBackgound from '@/components/hero/svgs/EllipseBackgound'
 
 export default {
   name: 'Hero',
   components: {
-    EllipseBackgound,
     ScrollIcon,
     ContentBody,
     NavBar
