@@ -1,0 +1,19 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap";
+
+$default-font-family: 'Poppins', sans-serif;
+
+* {
+  font-family: $default-font-family;
+  font-weight: normal;
+  letter-spacing: 3px;
+}
+
+.hero-title {
+  font-size: 4.38em;
+}
+
+$white: #f9f9f9;
+
+.custom-white {
+  color: $white !important;
+}

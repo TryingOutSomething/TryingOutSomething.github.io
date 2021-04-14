@@ -1,5 +1,5 @@
 <template>
-  <v-card elevation="1" max-width="1000px">
+  <v-card elevation="1" v-bind="$attrs">
     <slot/>
   </v-card>
 </template>

@@ -1,37 +1,51 @@
 <template>
   <div>
-    <nav-bar/>
+    <nav-bar :bg-colour="black" :txt-colour="white"/>
 
-    <v-container fluid>
-      <v-row justify="center">
-        <hero-content>
-          <template v-slot:title>
-            <p>Hello There 👋</p>
-          </template>
+    <v-container class="pa-0" fluid>
+      <content-body class="pt-12" :bg-colour="black">
+        <ellipse-backgound :txt-colour="white"/>
 
-          <template v-slot:subtitle>
-            <p>I'm Jan Owyeong!</p>
-          </template>
+        <template v-slot:title>
+          <v-row justify="center" class="my-12">
+            <h1 class="hero-title font-weight-bold custom-white">
+              Hello There 👋
+            </h1>
+          </v-row>
+        </template>
 
-          <template v-slot:scroll-icon>
-            <p>scroll svg</p>
-          </template>
-        </hero-content>
-      </v-row>
+        <template v-slot:subtitle>
+          <v-row justify="center" class="mb-12">
+            <h1 class="custom-white">I'm Jan Owyeong!</h1>
+          </v-row>
+        </template>
+
+        <template v-slot:scroll-icon>
+          <v-row justify="center" class="pb-12 pt-5">
+            <scroll-icon :txt-colour="white"/>
+          </v-row>
+        </template>
+      </content-body>
     </v-container>
   </div>
 </template>
 
 <script>
 import NavBar from '@/components/hero/navbar/Main'
-import HeroContent from '@/components/hero/ContentBody'
+import ContentBody from '@/components/hero/ContentBody'
+import { palette } from '@/mixins/design'
+import ScrollIcon from '@/components/hero/svgs/ScrollIcon'
+import EllipseBackgound from '@/components/hero/svgs/EllipseBackgound'
 
 export default {
   name: 'Hero',
   components: {
-    HeroContent,
+    EllipseBackgound,
+    ScrollIcon,
+    ContentBody,
     NavBar
-  }
+  },
+  mixins: [palette]
 }
 </script>
 
