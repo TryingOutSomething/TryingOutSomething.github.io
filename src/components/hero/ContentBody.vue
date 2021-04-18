@@ -1,9 +1,11 @@
 <template>
-  <base-card :color="bgColour">
-    <slot name="title"/>
-    <slot name="subtitle"/>
-    <slot name="scroll-icon"/>
-  </base-card>
+    <base-body :color="bgColour">
+      <v-col>
+        <slot name="title"/>
+        <slot name="subtitle"/>
+        <slot name="scroll-icon"/>
+      </v-col>
+    </base-body>
 </template>
 
 <script>

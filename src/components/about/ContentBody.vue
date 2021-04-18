@@ -1,9 +1,11 @@
 <template>
-  <base-card>
-    <slot name="title"/>
-    <slot name="description"/>
-    <slot name="skill-icons"/>
-  </base-card>
+  <base-body>
+    <v-col>
+      <slot name="title"/>
+      <slot name="description"/>
+      <slot name="skill-icons"/>
+    </v-col>
+  </base-body>
 </template>
 
 <script>

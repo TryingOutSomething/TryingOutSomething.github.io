@@ -1,30 +1,49 @@
 <template>
-  <v-container fluid>
-    <v-row justify="center">
-      <content-body>
-        <template v-slot:title>
-          <p>About Me</p>
-        </template>
+  <content-body>
+    <template v-slot:title>
+      <h1 class="topic-title my-12">
+        About Me
+      </h1>
+    </template>
 
-        <template v-slot:description>
-          <p>description</p>
-        </template>
+    <template v-slot:description>
+      <v-row justify="center">
+        <v-col sm="9" cols="10">
+          <h3 class="text-sm-justify about-description mb-12 mt-sm-12">I’m a computer science student at Nanyang
+            Technological University that does random projects during my free time. I love to try out new technologies
+            that increase my work productivity and reading blog articles about tech-related implementations.</h3>
+        </v-col>
+      </v-row>
+    </template>
 
-        <template v-slot:skill-icons>
-          <p>Skills accumulated:</p>
-          <p>icons</p>
-        </template>
-      </content-body>
-    </v-row>
-  </v-container>
+    <template v-slot:skill-icons>
+      <v-row justify="center">
+        <v-col sm="7">
+          <v-col offset-sm="1" class="pl-sm-10 pl-md-11">
+            <h2 class="mb-7 mt-5 subtitle-bold">
+              Skills accumulated:
+            </h2>
+          </v-col>
+
+          <skills-logo/>
+        </v-col>
+      </v-row>
+
+      <horizontal-padding/>
+    </template>
+  </content-body>
 </template>
 
 <script>
 import ContentBody from '@/components/about/ContentBody'
+import SkillsLogo from '@/components/about/SkillsLogo'
 
 export default {
   name: 'About',
-  components: { ContentBody }
+  components: {
+    SkillsLogo,
+    ContentBody
+  }
 }
 </script>
 

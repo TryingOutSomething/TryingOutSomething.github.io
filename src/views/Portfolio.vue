@@ -1,7 +1,7 @@
 <template>
   <div>
     <hero/>
-<!--    <about/>-->
+    <about/>
 <!--    <projects/>-->
 <!--    <resume/>-->
 <!--    <credits/>-->
@@ -9,7 +9,7 @@
 </template>
 
 <script>
-// import About from '@/components/about/Index'
+import About from '@/components/about/Index'
 import Hero from '@/components/hero/Index'
 // import Projects from '@/components/projects/Index'
 // import Resume from '@/components/resume/Index'
@@ -21,8 +21,8 @@ export default {
     // Credits,
     // Resume,
     // Projects,
-    Hero
-    // About
+    Hero,
+    About
   }
 }
 </script>

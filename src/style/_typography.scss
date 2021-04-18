@@ -5,15 +5,40 @@ $default-font-family: 'Poppins', sans-serif;
 * {
   font-family: $default-font-family;
   font-weight: normal;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
 }
 
 .hero-title {
-  font-size: 4.38em;
+  //font-size: 4.38em;
+  font-size: clamp(2.19rem, 13vw, 4.38rem);
+}
+
+.topic-title {
+  //font-size: 2.81em;
+  font-size: clamp(1.25rem, 9vw, 2.81rem);
+  text-transform: uppercase;
+}
+
+.subtitle-bold {
+  font-weight: bold !important;
+  letter-spacing: 1px !important;
+}
+
+.hero-title, .topic-title {
+  text-align: center;
+  font-weight: bold;
 }
 
 $white: #f9f9f9;
+$black: #19191a;
 
 .custom-white {
   color: $white !important;
+}
+
+.about-description {
+  //font-size: 1.25rem;
+  font-size: clamp(0.94rem, 4vw, 1.25rem);
+  color: $black !important;
+  letter-spacing: 0 !important;
 }
