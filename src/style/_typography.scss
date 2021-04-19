@@ -9,12 +9,10 @@ $default-font-family: 'Poppins', sans-serif;
 }
 
 .hero-title {
-  //font-size: 4.38em;
   font-size: clamp(2.19rem, 13vw, 4.38rem);
 }
 
 .topic-title {
-  //font-size: 2.81em;
   font-size: clamp(1.25rem, 9vw, 2.81rem);
   text-transform: uppercase;
 }
@@ -22,6 +20,11 @@ $default-font-family: 'Poppins', sans-serif;
 .subtitle-bold {
   font-weight: bold !important;
   letter-spacing: 1px !important;
+}
+
+.card-footer {
+  font-size: clamp(0.63rem, 2vw, 0.81rem);
+  letter-spacing: 0;
 }
 
 .hero-title, .topic-title {

@@ -1,6 +1,8 @@
 <template>
-  <content-body>
+  <content-body :bg-colour="white">
     <template v-slot:title>
+      <horizontal-padding height="3rem"/>
+
       <h1 class="topic-title my-12">
         About Me
       </h1>
@@ -37,13 +39,15 @@
 <script>
 import ContentBody from '@/components/about/ContentBody'
 import SkillsLogo from '@/components/about/SkillsLogo'
+import { palette } from '@/mixins/design'
 
 export default {
   name: 'About',
   components: {
     SkillsLogo,
     ContentBody
-  }
+  },
+  mixins: [palette]
 }
 </script>
 

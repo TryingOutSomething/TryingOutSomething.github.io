@@ -2,7 +2,7 @@
   <div>
     <hero/>
     <about/>
-<!--    <projects/>-->
+    <projects/>
 <!--    <resume/>-->
 <!--    <credits/>-->
   </div>
@@ -11,7 +11,7 @@
 <script>
 import About from '@/components/about/Index'
 import Hero from '@/components/hero/Index'
-// import Projects from '@/components/projects/Index'
+import Projects from '@/components/projects/Index'
 // import Resume from '@/components/resume/Index'
 // import Credits from '@/components/credits/Index'
 
@@ -20,7 +20,7 @@ export default {
   components: {
     // Credits,
     // Resume,
-    // Projects,
+    Projects,
     Hero,
     About
   }

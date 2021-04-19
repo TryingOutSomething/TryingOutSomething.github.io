@@ -1,13 +1,18 @@
 <template>
- <base-card>
-   <slot name="title"/>
-   <slot name="projects"/>
- </base-card>
+  <base-body :color="bgColour">
+    <v-col>
+      <slot name="title"/>
+      <slot name="projects"/>
+    </v-col>
+  </base-body>
 </template>
 
 <script>
+import { designProps } from '@/mixins/design'
+
 export default {
-  name: 'ContentBody'
+  name: 'ContentBody',
+  mixins: [designProps]
 }
 </script>
 

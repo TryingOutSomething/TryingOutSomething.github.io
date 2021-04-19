@@ -13,7 +13,7 @@ export const designProps = {
   props: {
     bgColour: {
       type: String,
-      default: 'blue'
+      default: 'white'
     },
 
     txtColour: {
