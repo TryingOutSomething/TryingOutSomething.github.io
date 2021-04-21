@@ -13,7 +13,7 @@
         <project-list/>
       </v-row>
 
-      <horizontal-padding height="5rem"/>
+      <horizontal-padding height="10rem"/>
     </template>
   </content-body>
 </template>

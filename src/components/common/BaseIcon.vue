@@ -6,7 +6,7 @@
 import { palette } from '@/mixins/design'
 
 export default {
-  name: 'FooterIcons',
+  name: 'BaseIcon',
   props: {
     size: {
       type: String,

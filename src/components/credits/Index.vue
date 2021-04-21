@@ -1,12 +1,12 @@
 <template>
   <v-footer :color="black" class="py-6">
-    <content-body class="px-12">
+    <content-body class="mx-12 px-12">
       <template v-slot:tools-used>
         <div>
           <span class="footer">Created With:</span>
 
-          <footer-icons :class="iconPaddingBeforeText" icon="mdi-vuejs"/>
-          <footer-icons icon="mdi-vuetify"/>
+          <base-icon :class="iconPaddingBeforeText" icon="mdi-vuejs"/>
+          <base-icon icon="mdi-vuetify"/>
         </div>
       </template>
 
@@ -18,9 +18,9 @@
         <div>
           <span class="footer">Connect with me:</span>
 
-          <footer-icons :class="iconPaddingBeforeText" icon="mdi-email"/>
-          <footer-icons class="pr-2" icon="mdi-github"/>
-          <footer-icons icon="mdi-linkedin"/>
+          <base-icon :class="iconPaddingBeforeText" icon="mdi-email"/>
+          <base-icon class="pr-2" icon="mdi-github"/>
+          <base-icon icon="mdi-linkedin"/>
         </div>
       </template>
     </content-body>
@@ -33,7 +33,6 @@ import { palette } from '@/mixins/design'
 export default {
   name: 'Credits',
   components: {
-    FooterIcons: () => import('./FooterIcons'),
     ContentBody: () => import('./ContentBody')
   },
   mixins: [palette],

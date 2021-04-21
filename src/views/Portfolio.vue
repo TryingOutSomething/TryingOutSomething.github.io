@@ -4,6 +4,7 @@
     <about/>
     <projects/>
     <resume/>
+    <scroll-to-top/>
     <credits/>
   </div>
 </template>
@@ -12,11 +13,12 @@
 export default {
   name: 'Portfolio',
   components: {
-    Credits: () => import('@/components/credits/Index'),
-    Resume: () => import('@/components/resume/Index'),
-    Projects: () => import('@/components/projects/Index'),
     Hero: () => import('@/components/hero/Index'),
-    About: () => import('@/components/about/Index')
+    About: () => import('@/components/about/Index'),
+    Projects: () => import('@/components/projects/Index'),
+    Resume: () => import('@/components/resume/Index'),
+    ScrollToTop: () => import('@/components/ScrollToTop'),
+    Credits: () => import('@/components/credits/Index')
   }
 }
 </script>
