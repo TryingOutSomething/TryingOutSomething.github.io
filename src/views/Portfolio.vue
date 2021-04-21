@@ -3,7 +3,7 @@
     <hero/>
     <about/>
     <projects/>
-<!--    <resume/>-->
+    <resume/>
 <!--    <credits/>-->
   </div>
 </template>
@@ -12,14 +12,14 @@
 import About from '@/components/about/Index'
 import Hero from '@/components/hero/Index'
 import Projects from '@/components/projects/Index'
-// import Resume from '@/components/resume/Index'
+import Resume from '@/components/resume/Index'
 // import Credits from '@/components/credits/Index'
 
 export default {
   name: 'Portfolio',
   components: {
     // Credits,
-    // Resume,
+    Resume,
     Projects,
     Hero,
     About

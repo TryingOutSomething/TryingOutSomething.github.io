@@ -1,14 +1,17 @@
 <template>
-  <base-card>
+  <base-body :color="bgColour">
     <slot name="title"/>
     <slot name="pdf-viewer"/>
     <slot name="download-button"/>
-  </base-card>
+  </base-body>
 </template>
 
 <script>
+import { designProps } from '@/mixins/design'
+
 export default {
-  name: 'ContentBody'
+  name: 'ContentBody',
+  mixins: [designProps]
 }
 </script>
 
