@@ -7,12 +7,11 @@
     <span class="card-footer">{{ language }}</span>
   </v-row>
 </template>
-<script>
-import LanguageIcon from '@/components/projects/projects_list/LanguageIcon'
 
+<script>
 export default {
   name: 'language-info',
-  components: { LanguageIcon },
+  components: { LanguageIcon: () => import('./LanguageIcon') },
   props: {
     language: {
       type: String,

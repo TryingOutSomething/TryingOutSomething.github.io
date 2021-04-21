@@ -13,8 +13,8 @@
     <template v-slot:download-button>
       <v-row class="my-12" justify="center">
         <download-resume
-          :bg-colour="brown"
           :pdf-src="pdfSrc"
+          :bg-colour="brown"
           :txt-colour="white"
         />
       </v-row>
@@ -25,23 +25,20 @@
 </template>
 
 <script>
-import ContentBody from '@/components/resume/ContentBody'
-import PdfRenderer from '@/components/resume/PdfRenderer'
-import DownloadResume from '@/components/resume/DownloadResume'
 import { palette } from '@/mixins/design'
 
 export default {
   name: 'Resume',
   components: {
-    DownloadResume,
-    PdfRenderer,
-    ContentBody
+    DownloadResume: () => import('@/components/resume/DownloadResume'),
+    PdfRenderer: () => import('@/components/resume/PdfRenderer'),
+    ContentBody: () => import('@/components/resume/ContentBody')
   },
   mixins: [palette],
 
   data () {
     return {
-      pdfSrc: 'resume.pdf'
+      pdfSrc: 'Jan_Owyeong_Resume_2021.pdf'
     }
   }
 }

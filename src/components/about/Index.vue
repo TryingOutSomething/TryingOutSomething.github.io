@@ -37,15 +37,13 @@
 </template>
 
 <script>
-import ContentBody from '@/components/about/ContentBody'
-import SkillsLogo from '@/components/about/SkillsLogo'
 import { palette } from '@/mixins/design'
 
 export default {
   name: 'About',
   components: {
-    SkillsLogo,
-    ContentBody
+    SkillsLogo: () => import('@/components/about/SkillsLogo'),
+    ContentBody: () => import('@/components/about/ContentBody')
   },
   mixins: [palette]
 }

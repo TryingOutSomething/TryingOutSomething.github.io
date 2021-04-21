@@ -7,12 +7,10 @@
 </template>
 
 <script>
-import Portfolio from '@/views/Portfolio'
-
 export default {
   name: 'App',
   components: {
-    Portfolio
+    Portfolio: () => import('@/views/Portfolio')
   }
 }
 </script>

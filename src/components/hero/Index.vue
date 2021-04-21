@@ -3,13 +3,13 @@
     <nav-bar :bg-colour="black" :txt-colour="white"/>
 
     <content-body :bg-colour="black">
-
       <template v-slot:title>
         <horizontal-padding/>
 
-        <h1 class="hero-title custom-white mb-12">
-          Hello There 👋
-        </h1>
+        <v-row justify="center">
+          <h1 class="hero-title custom-white mb-12">Hello There</h1>
+          <h1 class="hero-title custom-white mb-12 wave-hand">👋</h1>
+        </v-row>
       </template>
 
       <template v-slot:subtitle>
@@ -26,17 +26,14 @@
 </template>
 
 <script>
-import NavBar from '@/components/hero/navbar/Main'
-import ContentBody from '@/components/hero/ContentBody'
-import ScrollIcon from '@/components/hero/svgs/ScrollIcon'
 import { palette } from '@/mixins/design'
 
 export default {
   name: 'Hero',
   components: {
-    ScrollIcon,
-    ContentBody,
-    NavBar
+    ScrollIcon: () => import('@/components/hero/svgs/ScrollIcon'),
+    ContentBody: () => import('@/components/hero/ContentBody'),
+    NavBar: () => import('@/components/hero/navbar/Main')
   },
   mixins: [palette]
 }

@@ -1,6 +1,8 @@
 @import "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap";
 
 $default-font-family: 'Poppins', sans-serif;
+$white: #f9f9f9;
+$black: #19191a;
 
 * {
   font-family: $default-font-family;
@@ -24,7 +26,6 @@ $default-font-family: 'Poppins', sans-serif;
 
 .card-footer {
   font-size: clamp(0.63rem, 2vw, 0.81rem);
-  letter-spacing: 0;
 }
 
 .hero-title, .topic-title {
@@ -32,15 +33,20 @@ $default-font-family: 'Poppins', sans-serif;
   font-weight: bold;
 }
 
-$white: #f9f9f9;
-$black: #19191a;
+.footer, .card-footer {
+  letter-spacing: 0;
+}
+
+.footer {
+  font-size: clamp(0.56rem, 5vw, 0.75rem);
+  color: $white;
+}
 
 .custom-white {
   color: $white !important;
 }
 
 .about-description {
-  //font-size: 1.25rem;
   font-size: clamp(0.94rem, 4vw, 1.25rem);
   color: $black !important;
   letter-spacing: 0 !important;

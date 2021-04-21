@@ -1,0 +1,74 @@
+$float-up-origin: -2vh;
+$svg-translate-origin: 0;
+
+.wave-hand {
+  animation-name: wave-hand-animation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave-hand-animation {
+  0% {
+    transform: rotate(0.0deg)
+  }
+  10% {
+    transform: rotate(14.0deg)
+  }
+  20% {
+    transform: rotate(-8.0deg)
+  }
+  30% {
+    transform: rotate(14.0deg)
+  }
+  40% {
+    transform: rotate(-4.0deg)
+  }
+  50% {
+    transform: rotate(10.0deg)
+  }
+  60% {
+    transform: rotate(0.0deg)
+  }
+  100% {
+    transform: rotate(0.0deg)
+  }
+}
+
+#ellipse-wheel {
+  animation-name: float-down;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes float-down {
+  0% {
+    transform: translateY($svg-translate-origin)
+  }
+  50% {
+    transform: translateY(2.9vh);
+  }
+  100% {
+    transform: translateY($svg-translate-origin);
+  }
+}
+
+#scroll-down-arrow {
+  animation-name: float-up;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes float-up {
+  0% {
+    transform: translateY($float-up-origin)
+  }
+  50% {
+    transform: translateY($svg-translate-origin);
+  }
+  100% {
+    transform: translateY($float-up-origin);
+  }
+}
+

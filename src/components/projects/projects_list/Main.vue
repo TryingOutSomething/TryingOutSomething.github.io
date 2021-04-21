@@ -12,11 +12,10 @@
     </v-row>
   </v-col>
 </template>
-<script>
-import ProjectCard from '@/components/projects/projects_list/ProjectCard'
 
+<script>
 export default {
   name: 'ProjectList',
-  components: { ProjectCard }
+  components: { ProjectCard: () => import('./ProjectCard') }
 }
 </script>

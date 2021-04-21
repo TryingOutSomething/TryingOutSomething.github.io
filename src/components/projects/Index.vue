@@ -19,15 +19,13 @@
 </template>
 
 <script>
-import ContentBody from '@/components/projects/ContentBody'
 import { palette } from '@/mixins/design'
-import ProjectList from '@/components/projects/projects_list/Main'
 
 export default {
   name: 'Projects',
   components: {
-    ProjectList,
-    ContentBody
+    ProjectList: () => import('@/components/projects/projects_list/Main'),
+    ContentBody: () => import('@/components/projects/ContentBody')
   },
   mixins: [palette]
 }

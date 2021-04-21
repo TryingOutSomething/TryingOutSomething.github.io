@@ -4,25 +4,19 @@
     <about/>
     <projects/>
     <resume/>
-<!--    <credits/>-->
+    <credits/>
   </div>
 </template>
 
 <script>
-import About from '@/components/about/Index'
-import Hero from '@/components/hero/Index'
-import Projects from '@/components/projects/Index'
-import Resume from '@/components/resume/Index'
-// import Credits from '@/components/credits/Index'
-
 export default {
   name: 'Portfolio',
   components: {
-    // Credits,
-    Resume,
-    Projects,
-    Hero,
-    About
+    Credits: () => import('@/components/credits/Index'),
+    Resume: () => import('@/components/resume/Index'),
+    Projects: () => import('@/components/projects/Index'),
+    Hero: () => import('@/components/hero/Index'),
+    About: () => import('@/components/about/Index')
   }
 }
 </script>

@@ -8,12 +8,11 @@
     <language-info :language="language" class="px-6 pb-3"/>
   </base-body>
 </template>
-<script>
-import LanguageInfo from '@/components/projects/projects_list/LanguageInfo'
 
+<script>
 export default {
   name: 'ProjectCard',
-  components: { LanguageInfo },
+  components: { LanguageInfo: () => import('./LanguageInfo') },
   props: {
     title: {
       type: String,

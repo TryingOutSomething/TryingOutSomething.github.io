@@ -1,11 +1,9 @@
 <template>
-  <v-container fluid>
-    <v-row justify="space-between">
-      <slot name="tools-used"/>
-      <slot name="copyright"/>
-      <slot name="contact"/>
-    </v-row>
-  </v-container>
+  <v-row align="center" justify="space-between">
+    <slot name="tools-used"/>
+    <slot name="copyright"/>
+    <slot name="contact"/>
+  </v-row>
 </template>
 
 <script>

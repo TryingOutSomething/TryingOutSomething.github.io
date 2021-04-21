@@ -1,8 +1,10 @@
 <template>
   <base-body :color="bgColour">
-    <slot name="title"/>
-    <slot name="pdf-viewer"/>
-    <slot name="download-button"/>
+    <v-col>
+      <slot name="title"/>
+      <slot name="pdf-viewer"/>
+      <slot name="download-button"/>
+    </v-col>
   </base-body>
 </template>
 

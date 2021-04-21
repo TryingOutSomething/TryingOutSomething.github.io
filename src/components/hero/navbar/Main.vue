@@ -5,12 +5,11 @@
 </template>
 
 <script>
-import DesktopNavBar from '@/components/hero/navbar/DesktopNavBar'
 import { designProps } from '@/mixins/design'
 
 export default {
   name: 'NavBar',
-  components: { DesktopNavBar },
+  components: { DesktopNavBar: () => import('./DesktopNavBar') },
   mixins: [designProps]
 }
 </script>
