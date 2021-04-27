@@ -4,6 +4,7 @@
       v-for="(icon, index) in logoRecord"
       :key="index"
       sm="1"
+      cols="4"
       eager
     >
       <v-img :src="icon.src" height="4rem" contain/>
@@ -58,7 +59,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-
-</style>

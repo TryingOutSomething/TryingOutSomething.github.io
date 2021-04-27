@@ -1,11 +1,15 @@
 export const screenSizeIdentifier = {
   computed: {
     isMobileScreen () {
-      return this.$vuetify.breakpoint.smAndDown
+      return this.$vuetify.breakpoint.xs
+    },
+
+    isMobileDevice () {
+      return this.$vuetify.breakpoint.mobile
     },
 
     isTabletScreen () {
-      return this.$vuetify.breakpoint.mdAndDown
+      return this.$vuetify.breakpoint.smAndUp
     }
   }
 }
@@ -33,20 +37,6 @@ export const determineElementViewport = {
 
     toggleAnimationInView (animationIdentifier) {
       return this.elementIsVisible ? animationIdentifier : ''
-    }
-  }
-}
-
-export const navbarScrollIds = {
-  methods: {
-    async scrollToAbout () {
-      await this.$vuetify.goTo('#about')
-    },
-    async scrollToProjects () {
-      await this.$vuetify.goTo('#projects')
-    },
-    async scrollToResume () {
-      await this.$vuetify.goTo('#resume')
     }
   }
 }

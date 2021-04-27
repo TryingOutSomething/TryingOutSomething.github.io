@@ -1,30 +1,23 @@
 <template>
   <div>
-    <nav-bar :bg-colour="black" :txt-colour="white"/>
+    <nav-bar :bg-colour="black" :txt-colour="white" :is-mobile-screen="isMobileScreen"/>
 
     <content-body :bg-colour="black">
       <template v-slot:title>
-        <horizontal-padding/>
+        <horizontal-padding :height="horizontalPaddingHeight"/>
 
-        <v-row justify="center">
-          <h1 class="hero-title custom-white mb-12">Hello There</h1>
-          <h1
-            class="hero-title custom-white mb-12"
-            :class="showAnimation"
-            v-observe-visibility="trackViewportVisibilityConfig"
-          >
-            👋
-          </h1>
-        </v-row>
+        <hero-title :is-mobile-screen="isMobileScreen"/>
       </template>
 
       <template v-slot:subtitle>
-        <h1 class="custom-white text-center mb-12">I'm Jan Owyeong!</h1>
+        <h1 class="hero-subtitle custom-white text-center mb-12">I'm Jan Owyeong!</h1>
       </template>
 
       <template v-slot:scroll-icon>
         <v-row justify="center" class="pb-12 mb-5 pt-5">
-          <scroll-icon :txt-colour="white"/>
+          <scroll-icon-small v-if="isMobileDevice" :txt-colour="white" />
+
+          <scroll-icon v-else :txt-colour="white"/>
         </v-row>
       </template>
     </content-body>
@@ -33,20 +26,22 @@
 
 <script>
 import { palette } from '@/mixins/design'
-import { determineElementViewport } from '@/mixins/screen'
+import { screenSizeIdentifier } from '@/mixins/screen'
 
 export default {
   name: 'Hero',
   components: {
-    ScrollIcon: () => import('@/components/hero/svgs/ScrollIcon'),
-    ContentBody: () => import('@/components/hero/ContentBody'),
-    NavBar: () => import('@/components/hero/navbar/Main')
+    ScrollIcon: () => import('./svgs/ScrollIcon'),
+    ScrollIconSmall: () => import('./svgs/ScrollIconSmall'),
+    ContentBody: () => import('./ContentBody'),
+    NavBar: () => import('./NavBar'),
+    HeroTitle: () => import('./HeroTitle')
   },
-  mixins: [palette, determineElementViewport],
+  mixins: [palette, screenSizeIdentifier],
 
   computed: {
-    showAnimation () {
-      return this.toggleAnimationInView('wave-hand')
+    horizontalPaddingHeight () {
+      return this.isMobileScreen ? '1rem' : '10rem'
     }
   }
 }

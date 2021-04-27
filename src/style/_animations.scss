@@ -46,10 +46,28 @@ $svg-translate-origin: 0;
     transform: translateY($svg-translate-origin)
   }
   50% {
-    transform: translateY(2.9vh);
+    transform: translateY(19%);
   }
   100% {
     transform: translateY($svg-translate-origin);
+  }
+}
+
+#ellipse-wheel-small {
+  animation-name: float-opposite;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes float-opposite {
+  0% {
+    transform: translateY($svg-translate-origin)
+  }
+  50% {
+    transform: translateY(-20%);
+  }
+  100% {
+    transform: translateY($svg-translate-origin)
   }
 }
 

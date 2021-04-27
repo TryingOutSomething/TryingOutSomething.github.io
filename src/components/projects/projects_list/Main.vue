@@ -1,5 +1,5 @@
 <template>
-  <v-col sm="7">
+  <v-col xl="7" lg="8" md="9" sm="11" cols="11">
     <v-row justify="center">
       <v-col v-for="i in 9" :key="i" sm="4">
         <project-card

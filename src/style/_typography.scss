@@ -14,6 +14,10 @@ $black: #19191a;
   font-size: clamp(2.19rem, 13vw, 4.38rem);
 }
 
+.hero-subtitle {
+  font-size: clamp(1.25rem, 5vw, 2rem);
+}
+
 .topic-title {
   font-size: clamp(1.25rem, 9vw, 2.81rem);
   text-transform: uppercase;
