@@ -1,5 +1,5 @@
 <template>
-  <content-body :bg-colour="black">
+  <content-body id="projects" :bg-colour="black">
     <template v-slot:title>
       <horizontal-padding height="3rem"/>
 

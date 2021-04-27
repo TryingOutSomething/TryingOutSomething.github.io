@@ -46,8 +46,16 @@ $black: #19191a;
   color: $white !important;
 }
 
+.custom-black, .about-description {
+  color: $black !important;
+}
+
+.hover-button-text {
+  font-size: 0.75rem;
+  letter-spacing: 1px !important;
+}
+
 .about-description {
   font-size: clamp(0.94rem, 4vw, 1.25rem);
-  color: $black !important;
   letter-spacing: 0 !important;
 }

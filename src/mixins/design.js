@@ -4,7 +4,8 @@ export const palette = {
       white: '#f9f9f9',
       gray: '#8a938c',
       brown: '#af5936',
-      black: '#19191a'
+      black: '#19191a',
+      yellow: '#f9c410'
     }
   }
 }

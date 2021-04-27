@@ -1,5 +1,5 @@
 <template>
-  <content-body :bg-colour="white">
+  <content-body id="about" :bg-colour="white">
     <template v-slot:title>
       <horizontal-padding height="3rem"/>
 
@@ -11,9 +11,12 @@
     <template v-slot:description>
       <v-row justify="center">
         <v-col sm="9" cols="10">
-          <h3 class="text-sm-justify about-description mb-12 mt-sm-12">I’m a computer science student at Nanyang
-            Technological University that does random projects during my free time. I love to try out new technologies
-            that increase my work productivity and reading blog articles about tech-related implementations.</h3>
+          <h3 class="text-sm-justify about-description mb-12 mt-sm-12">
+            I’m a computer science student at Nanyang Technological University that does random projects during my free
+            time. I love to try out new technologies that increase my work productivity and reading blog articles about
+            tech-related implementations. I am eager to gain practical experience and apply the theory techniques learnt
+            in school to build software.
+          </h3>
         </v-col>
       </v-row>
     </template>

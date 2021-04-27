@@ -62,7 +62,7 @@ $svg-translate-origin: 0;
 
 @keyframes float-up {
   0% {
-    transform: translateY($float-up-origin)
+    transform: translateY($float-up-origin);
   }
   50% {
     transform: translateY($svg-translate-origin);

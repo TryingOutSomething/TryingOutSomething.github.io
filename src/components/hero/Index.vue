@@ -8,7 +8,13 @@
 
         <v-row justify="center">
           <h1 class="hero-title custom-white mb-12">Hello There</h1>
-          <h1 class="hero-title custom-white mb-12 wave-hand">👋</h1>
+          <h1
+            class="hero-title custom-white mb-12"
+            :class="showAnimation"
+            v-observe-visibility="trackViewportVisibilityConfig"
+          >
+            👋
+          </h1>
         </v-row>
       </template>
 
@@ -27,6 +33,7 @@
 
 <script>
 import { palette } from '@/mixins/design'
+import { determineElementViewport } from '@/mixins/screen'
 
 export default {
   name: 'Hero',
@@ -35,7 +42,13 @@ export default {
     ContentBody: () => import('@/components/hero/ContentBody'),
     NavBar: () => import('@/components/hero/navbar/Main')
   },
-  mixins: [palette]
+  mixins: [palette, determineElementViewport],
+
+  computed: {
+    showAnimation () {
+      return this.toggleAnimationInView('wave-hand')
+    }
+  }
 }
 </script>
 

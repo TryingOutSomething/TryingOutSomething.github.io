@@ -2,7 +2,8 @@ import Vue from 'vue'
 import App from './App.vue'
 import vuetify from './plugins/vuetify'
 
-import './components/loader'
+import './configs/loader'
+import './plugins/vue-observe-visiblity'
 
 Vue.config.productionTip = false
 

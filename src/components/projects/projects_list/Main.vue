@@ -7,6 +7,8 @@
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
           language="Language"
           title="Project 1"
+          git-url="https://google.com.sg"
+          project-url="https://google.com.sg"
         />
       </v-col>
     </v-row>

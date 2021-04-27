@@ -5,7 +5,7 @@ import Vue from 'vue'
 
 const vueComponents = require.context(
   // Look for files in the specified directory
-  './common',
+  '../components/common',
   // Look in subdirectories
   false,
   // Only include prefixed .vue files
