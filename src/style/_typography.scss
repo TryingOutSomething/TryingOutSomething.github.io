@@ -8,6 +8,7 @@ $black: #19191a;
   font-family: $default-font-family;
   font-weight: normal;
   letter-spacing: 2px;
+  text-decoration: none;
 }
 
 .hero-title {
@@ -43,7 +44,8 @@ $black: #19191a;
 }
 
 .card-footer {
-  font-size: clamp(0.63rem, 2vw, 0.81rem);
+  font-size: clamp(0.7rem, 2vw, 0.81rem);
+  font-weight: 400;
 }
 
 .hero-title, .topic-title {

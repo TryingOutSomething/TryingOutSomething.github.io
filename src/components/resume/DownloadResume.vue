@@ -1,5 +1,5 @@
 <template>
-  <a :download="pdfSrc" :href="pdfSrc" class="download-button">
+  <a :download="pdfSrc" :href="pdfSrc">
     <text-button
       x-large
       :color="bgColour"

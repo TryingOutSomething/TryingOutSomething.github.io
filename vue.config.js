@@ -8,5 +8,6 @@ module.exports = {
     host: 'localhost',
     open: false,
     disableHostCheck: true
-  }
+  },
+  productionSourceMap: false
 }

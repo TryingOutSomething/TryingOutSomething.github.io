@@ -1,5 +1,5 @@
 <template>
-  <v-overlay v-if="false" absolute opacity="0.7">
+  <v-overlay v-if="onHover" absolute opacity="0.7">
     <v-col>
       <v-row :class="hasDemoUrlAddPadding" justify="center">
         <a :href="gitUrl" target="_blank">

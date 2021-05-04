@@ -1,5 +1,5 @@
 <template>
-  <v-hover v-slot="{ hover:onHover }" :open-delay="hoverDelay" :close-delay="hoverDelay">
+  <v-hover v-slot="{ hover:onHover }">
     <base-body
       v-bind="$attrs"
       v-on="pressEvent"
@@ -7,9 +7,9 @@
       :height="cardHeight"
       :color="bgColour"
     >
-      <v-scroll-x-transition>
+      <v-scale-transition origin="center center">
         <project-url :on-hover="onHover || showOverlay" :git-url="gitUrl" :project-url="projectUrl"/>
-      </v-scroll-x-transition>
+      </v-scale-transition>
 
       <v-col sm="10">
         <h2 class="card-header pl-4 pt-3">{{ title }}</h2>
@@ -70,7 +70,6 @@ export default {
 
   data () {
     return {
-      hoverDelay: 50,
       showOverlay: false
     }
   },

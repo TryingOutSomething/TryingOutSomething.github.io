@@ -3,6 +3,8 @@ object.pdf-display {
   height: 60vh;
 }
 
-.download-button {
-  text-decoration: none;
+.v-list__tile--link:hover {
+  @media (hover: none) {
+    background: transparent
+  }
 }
