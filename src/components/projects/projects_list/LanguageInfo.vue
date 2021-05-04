@@ -1,6 +1,6 @@
 <template>
   <v-row align="center">
-    <v-col class="pr-0 mr-md-n2 mr-xl-n6" cols="2">
+    <v-col class="pr-0 mr-lg-2 mr-xl-1 mr-md-3 mr-sm-3 mr-2" cols="1">
       <language-icon/>
     </v-col>
 

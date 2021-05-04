@@ -8,8 +8,8 @@ export const screenSizeIdentifier = {
       return this.$vuetify.breakpoint.mobile
     },
 
-    isTabletScreen () {
-      return this.$vuetify.breakpoint.smAndUp
+    isTabletAndMobileScreen () {
+      return this.$vuetify.breakpoint.smAndDown
     }
   }
 }

@@ -1,9 +1,24 @@
 <template>
   <v-app-bar elevation="0" :color="bgColour" height="100px">
     <v-row :justify="isMobileOrDesktopJustify" class="mr-md-12">
-      <text-button text="about" :colour="txtColour" @click="scrollToAbout"/>
-      <text-button text="projects" :colour="txtColour" @click="scrollToProjects"/>
-      <text-button text="resume" :colour="txtColour" @click="scrollToResume"/>
+      <text-button
+        :color="bgColour"
+        text="about"
+        text-classes="custom-white"
+        @click="scrollToAbout"
+      />
+
+      <text-button
+        :color="bgColour"
+        text="projects"
+        text-classes="custom-white"
+        @click="scrollToProjects"/>
+
+      <text-button
+        :color="bgColour"
+        text="resume"
+        text-classes="custom-white"
+        @click="scrollToResume"/>
     </v-row>
   </v-app-bar>
 </template>
@@ -15,11 +30,6 @@ export default {
   name: 'NavBar',
   mixins: [designProps],
   props: {
-    txtColour: {
-      type: String,
-      default: 'black'
-    },
-
     isMobileScreen: {
       type: Boolean,
       required: true

@@ -1,6 +1,6 @@
 <template>
   <v-fab-transition>
-    <base-button
+    <v-btn
       bottom
       fab
       fixed
@@ -11,10 +11,8 @@
       :color="gray"
       @click="scrollToTop"
     >
-      <template v-slot:text>
-        <v-icon :color="white">mdi-chevron-up</v-icon>
-      </template>
-    </base-button>
+      <base-icon icon="mdi-chevron-up" />
+    </v-btn>
   </v-fab-transition>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav-bar :bg-colour="black" :txt-colour="white" :is-mobile-screen="isMobileScreen"/>
+    <nav-bar :bg-colour="black" :is-mobile-screen="isMobileScreen"/>
 
     <content-body :bg-colour="black">
       <template v-slot:title>

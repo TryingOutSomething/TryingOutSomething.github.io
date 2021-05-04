@@ -1,8 +1,8 @@
 <template>
   <v-hover v-slot="{ hover:onHover }" :open-delay="hoverDelay" :close-delay="hoverDelay">
-    <base-body v-bind="$attrs">
+    <base-body v-bind="$attrs" v-on="pressEvent">
       <v-scroll-x-transition>
-        <project-url :on-hover="onHover" :git-url="gitUrl" :project-url="projectUrl"/>
+        <project-url :on-hover="onHover || showOverlay" :git-url="gitUrl" :project-url="projectUrl"/>
       </v-scroll-x-transition>
 
       <v-col sm="10">
@@ -16,12 +16,15 @@
 </template>
 
 <script>
+import { screenSizeIdentifier } from '@/mixins/screen'
+
 export default {
   name: 'ProjectCard',
   components: {
     ProjectUrl: () => import('./ProjectUrl'),
     LanguageInfo: () => import('./LanguageInfo')
   },
+  mixins: [screenSizeIdentifier],
   props: {
     title: {
       type: String,
@@ -46,7 +49,20 @@ export default {
 
   data () {
     return {
-      hoverDelay: 50
+      hoverDelay: 50,
+      showOverlay: false
+    }
+  },
+
+  computed: {
+    pressEvent () {
+      return this.isMobileDevice ? { click: this.toggleOverlayOnMobile } : {}
+    }
+  },
+
+  methods: {
+    toggleOverlayOnMobile () {
+      this.showOverlay = !this.showOverlay
     }
   }
 }

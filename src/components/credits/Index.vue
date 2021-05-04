@@ -1,49 +1,22 @@
 <template>
   <v-footer :color="black" class="py-6">
-    <content-body class="mx-12 px-12">
-      <template v-slot:tools-used>
-        <div>
-          <span class="footer">Created With:</span>
+    <mobile-footer v-if="isMobileScreen"/>
 
-          <base-icon :class="iconPaddingBeforeText" icon="mdi-vuejs"/>
-          <base-icon icon="mdi-vuetify"/>
-        </div>
-      </template>
-
-      <template v-slot:copyright>
-        <span class="footer">© 2021 Jan Owyeong Guo Yong | Singapore, Singapore</span>
-      </template>
-
-      <template v-slot:contact>
-        <div>
-          <span class="footer">Connect with me:</span>
-
-          <base-icon :class="iconPaddingBeforeText" icon="mdi-email"/>
-          <base-icon class="pr-2" icon="mdi-github"/>
-          <base-icon icon="mdi-linkedin"/>
-        </div>
-      </template>
-    </content-body>
+    <desktop-footer v-else class="mx-md-12 px-md-12 px-sm-11"/>
   </v-footer>
 </template>
 
 <script>
 import { palette } from '@/mixins/design'
+import { screenSizeIdentifier } from '@/mixins/screen'
+import MobileFooter from '@/components/credits/MobileFooter'
 
 export default {
   name: 'Credits',
   components: {
-    ContentBody: () => import('./ContentBody')
+    MobileFooter,
+    DesktopFooter: () => import('./DesktopFooter')
   },
-  mixins: [palette],
-  data () {
-    return {
-      iconPaddingBeforeText: 'px-2'
-    }
-  }
+  mixins: [palette, screenSizeIdentifier]
 }
 </script>
-
-<style scoped>
-
-</style>

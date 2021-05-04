@@ -1,22 +1,31 @@
 <template>
-  <base-button v-on="$listeners" text :color="colour">
-    <template v-slot:text>
-      {{ text }}
-    </template>
-  </base-button>
+  <v-btn v-on="$listeners" v-bind="$attrs">
+    <base-icon
+      v-if="iconName"
+      :icon="iconName"
+      :class="iconClasses"/>
+
+    <span :class="textClasses">{{ text }}</span>
+  </v-btn>
 </template>
 
 <script>
 export default {
   name: 'TextButton',
   props: {
-    text: {
+    iconClasses: {
       type: String,
-      required: true
+      default: 'mr-2'
     },
-    colour: {
+    iconName: {
       type: String,
-      default: 'black'
+      default: undefined
+    },
+    textClasses: {
+      type: String
+    },
+    text: {
+      type: String
     }
   }
 }

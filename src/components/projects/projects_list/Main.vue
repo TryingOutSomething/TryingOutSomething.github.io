@@ -1,7 +1,7 @@
 <template>
   <v-col xl="7" lg="8" md="9" sm="11" cols="11">
-    <v-row justify="center">
-      <v-col v-for="i in 9" :key="i" sm="4">
+    <v-row>
+      <v-col v-for="i in 10" :key="i" sm="4">
         <project-card
           class="mb-sm-3"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
