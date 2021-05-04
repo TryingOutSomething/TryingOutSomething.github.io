@@ -1,22 +1,28 @@
 <template>
   <v-hover v-slot="{ hover:onHover }" :open-delay="hoverDelay" :close-delay="hoverDelay">
-    <base-body v-bind="$attrs" v-on="pressEvent">
+    <base-body
+      v-bind="$attrs"
+      v-on="pressEvent"
+      width="350"
+      :height="cardHeight"
+      :color="bgColour"
+    >
       <v-scroll-x-transition>
         <project-url :on-hover="onHover || showOverlay" :git-url="gitUrl" :project-url="projectUrl"/>
       </v-scroll-x-transition>
 
       <v-col sm="10">
-        <v-card-title>{{ title }}</v-card-title>
-        <v-card-text>{{ description }}</v-card-text>
+        <h2 class="card-header pl-4 pt-3">{{ title }}</h2>
+        <p class="card-description pl-4 mb-0 mt-5">{{ description }}</p>
       </v-col>
 
-      <language-info :language="language" class="px-6 pb-3"/>
+      <language-info :bg-colour="bgColour" :language="language" class="px-6 pb-3"/>
     </base-body>
   </v-hover>
 </template>
 
 <script>
-import { screenSizeIdentifier } from '@/mixins/screen'
+import { designProps } from '@/mixins/design'
 
 export default {
   name: 'ProjectCard',
@@ -24,7 +30,7 @@ export default {
     ProjectUrl: () => import('./ProjectUrl'),
     LanguageInfo: () => import('./LanguageInfo')
   },
-  mixins: [screenSizeIdentifier],
+  mixins: [designProps],
   props: {
     title: {
       type: String,
@@ -44,6 +50,12 @@ export default {
     },
     projectUrl: {
       type: String
+    },
+    cardHeight: {
+      type: [Number, String]
+    },
+    isMobileDevice: {
+      type: Boolean
     }
   },
 

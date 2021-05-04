@@ -28,6 +28,20 @@ $black: #19191a;
   letter-spacing: 1px !important;
 }
 
+.card-header {
+  font-size: 1.25rem;
+  letter-spacing: 0.0125rem !important;
+  line-height: 2rem;
+  font-weight: 500;
+}
+
+.card-description {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  letter-spacing: 0.0071428571rem;
+  font-weight: 400;
+}
+
 .card-footer {
   font-size: clamp(0.63rem, 2vw, 0.81rem);
 }
@@ -50,7 +64,7 @@ $black: #19191a;
   color: $white !important;
 }
 
-.custom-black, .about-description {
+.custom-black, .about-description, .card-description {
   color: $black !important;
 }
 

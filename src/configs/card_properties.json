@@ -1,0 +1,58 @@
+[
+  {
+    "project_name": "Github Repo Viewer",
+    "description": "View trending repositories built by developers on Github using Vue3's Composition API",
+    "demo_url": "https://5f3546afd1ccbb70569b5a74--focused-cray-9a652d.netlify.app/",
+    "github_url": "https://github.com/TryingOutSomething/github-repo-viewer-vue3",
+    "language": "vue"
+  },
+  {
+    "project_name": "Binary To Decimal",
+    "description": "A web project to converts binary value inputs to their decimal form",
+    "demo_url": "https://csb-sm425-hqeyvdokn.vercel.app/",
+    "github_url": "https://github.com/TryingOutSomething/Zoomba",
+    "language": "vue"
+  },
+  {
+    "project_name": "Youtube Video Bot",
+    "description": "A Telegram bot service that queries Youtube videos",
+    "demo_url": null,
+    "github_url": "https://github.com/TryingOutSomething/Telegram-bot-Vanilla",
+    "language": "node"
+  },
+  {
+    "project_name": "Zoomba",
+    "description": "NTU CZ3002 AY20/21 Sem 2 Lab Project. This project contains a demo of the landing page and admin CMS dashboard",
+    "demo_url": "https://tryingoutsomething.github.io/Zoomba/",
+    "github_url": "https://github.com/TryingOutSomething/Zoomba",
+    "language": "vue"
+  },
+  {
+    "project_name": "Sound Mode",
+    "description": "A plugin to manage device's sound mode",
+    "demo_url": null,
+    "github_url": "https://github.com/TryingOutSomething/sound_mode",
+    "language": "flutter"
+  },
+  {
+    "project_name": "NP CCA Web Scraper",
+    "description": "A web scrapper project to scrape Co-Curricular Activities (CCA) information from Ngee Ann Polytechnic's website",
+    "demo_url": null,
+    "github_url": "https://github.com/TryingOutSomething/NP-CCA-web-scraper",
+    "language": "python"
+  },
+  {
+    "project_name": "Snapee Bot",
+    "description": "A Telegram bot service that allows users to exchange, redeem and use shopping vouchers from Snapee",
+    "demo_url": null,
+    "github_url": "https://github.com/TryingOutSomething/Snapee",
+    "language": "python"
+  },
+  {
+    "project_name": "Match In A Snap",
+    "description": "A website that recommends food places base on user's preference and their location",
+    "demo_url": null,
+    "github_url": "https://github.com/TryingOutSomething/match-in-a-snap",
+    "language": "vue"
+  }
+]

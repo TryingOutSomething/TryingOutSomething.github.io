@@ -11,7 +11,7 @@
       :color="gray"
       @click="scrollToTop"
     >
-      <base-icon icon="mdi-chevron-up" />
+      <base-icon icon="mdi-chevron-up" size="1.8rem"/>
     </v-btn>
   </v-fab-transition>
 </template>

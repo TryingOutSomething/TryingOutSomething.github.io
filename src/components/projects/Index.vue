@@ -10,7 +10,7 @@
 
     <template v-slot:projects>
       <v-row class="pt-12" justify="center">
-        <project-list/>
+        <project-list :bg-colour="white"/>
       </v-row>
 
       <horizontal-padding height="10rem"/>

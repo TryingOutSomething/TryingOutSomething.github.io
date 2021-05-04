@@ -1,6 +1,6 @@
 <template>
   <v-app-bar elevation="0" :color="bgColour" height="100px">
-    <v-row :justify="isMobileOrDesktopJustify" class="mr-md-12">
+    <v-row :justify="isMobileOrDesktopJustify" class="mr-sm-12">
       <text-button
         :color="bgColour"
         text="about"
