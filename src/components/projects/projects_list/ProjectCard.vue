@@ -16,7 +16,12 @@
         <p class="card-description pl-4 mb-0 mt-5">{{ description }}</p>
       </v-col>
 
-      <language-info :bg-colour="bgColour" :language="language" class="px-6 pb-3"/>
+      <language-info
+        class="px-6 pb-3"
+        :bg-colour="bgColour"
+        :language="language"
+        :language-colour="languageColour"
+      />
     </base-body>
   </v-hover>
 </template>
@@ -41,6 +46,10 @@ export default {
       required: true
     },
     language: {
+      type: String,
+      required: true
+    },
+    languageColour: {
       type: String,
       required: true
     },

@@ -2,7 +2,7 @@
   <v-footer :color="bgColour" absolute>
     <v-row align="center">
       <v-col class="pr-0 mr-lg-2 mr-xl-1 mr-md-3 mr-sm-3 mr-2" cols="1">
-        <language-icon/>
+        <language-icon :colour="languageColour"/>
       </v-col>
 
       <span class="card-footer">{{ language }}</span>
@@ -21,6 +21,9 @@ export default {
     language: {
       type: String,
       required: true
+    },
+    languageColour: {
+      type: String
     }
   }
 }

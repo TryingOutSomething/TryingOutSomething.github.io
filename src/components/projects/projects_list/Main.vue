@@ -9,6 +9,7 @@
           :title="project.project_name"
           :description="project.description"
           :language="project.language"
+          :language-colour="project.language_colour"
           :git-url="project.github_url"
           :project-url="project.demo_url"
         />
@@ -18,7 +19,7 @@
 </template>
 
 <script>
-import projectConfig from '@/configs/card_properties.json'
+import { getProjectList } from '@/configs/card_properties'
 import { designProps } from '@/mixins/design'
 import { screenSizeIdentifier } from '@/mixins/screen'
 
@@ -27,13 +28,11 @@ export default {
   components: { ProjectCard: () => import('./ProjectCard') },
   mixins: [designProps, screenSizeIdentifier],
 
-  data () {
-    return {
-      projects: projectConfig
-    }
-  },
-
   computed: {
+    projects () {
+      return getProjectList()
+    },
+
     cardHeight () {
       let height
 
