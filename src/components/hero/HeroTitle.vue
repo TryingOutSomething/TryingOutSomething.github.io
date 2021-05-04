@@ -1,7 +1,9 @@
 <template>
   <v-row justify="center">
     <v-col v-if="isMobileScreen">
-      <h1 class="hero-title custom-white">Hello There</h1>
+      <h1 class="hero-title custom-white">
+        Hello There
+      </h1>
 
       <v-row justify="center">
         <v-col sm="2" cols="3">
@@ -17,7 +19,7 @@
     </v-col>
 
     <div v-else class="d-inline-flex">
-      <h1 class="hero-title custom-white mb-md-12">Hello There</h1>
+      <h1 class="hero-title custom-white mb-md-12" title="General Kenobi!!!">Hello There</h1>
       <h1
         class="hero-title custom-white mb-12"
         :class="showAnimation"
@@ -50,6 +52,4 @@ export default {
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
