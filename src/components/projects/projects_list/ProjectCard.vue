@@ -1,11 +1,11 @@
 <template>
   <v-hover v-slot="{ hover:onHover }">
-    <base-body
-      v-bind="$attrs"
+    <v-card
       v-on="pressEvent"
       width="350"
       :height="cardHeight"
       :color="bgColour"
+      elevation="0"
     >
       <v-scale-transition origin="center center">
         <project-url :on-hover="onHover || showOverlay" :git-url="gitUrl" :project-url="projectUrl"/>
@@ -22,7 +22,7 @@
         :language="language"
         :language-colour="languageColour"
       />
-    </base-body>
+    </v-card>
   </v-hover>
 </template>
 

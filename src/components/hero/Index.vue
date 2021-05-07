@@ -2,7 +2,7 @@
   <div>
     <nav-bar :bg-colour="black" :is-mobile-screen="isMobileScreen"/>
 
-    <content-body :bg-colour="black">
+    <content-body :bg-colour="black" rounded="0">
       <template v-slot:title>
         <horizontal-padding :height="horizontalPaddingHeight"/>
 

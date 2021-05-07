@@ -21,17 +21,17 @@
     "language": "vue"
   },
   {
-    "project_name": "Sound Mode",
-    "description": "A dart/flutter plugin to manage device's sound mode",
+    "project_name": "Car park Finder",
+    "description": "An app that finds the nearest car park from your current GPS location in Singapore. It displays the number of available car park lots as well",
     "demo_url": null,
-    "github_url": "https://github.com/TryingOutSomething/sound_mode",
-    "language": "dart"
+    "github_url": "https://github.com/TryingOutSomething/cz2006-carpark-finder",
+    "language": "javascript"
   },
   {
-    "project_name": "NP CCA Web Scraper",
-    "description": "A web scrapper project to scrape Co-Curricular Activities (CCA) information from Ngee Ann Polytechnic's website",
+    "project_name": "CCA Web Scraper",
+    "description": "A web scrapper project that scrapes Co-Curricular Activities (CCA) information from Ngee Ann Polytechnic's website",
     "demo_url": null,
-    "github_url": "https://github.com/TryingOutSomething/NP-CCA-web-scraper",
+    "github_url": "https://github.com/TryingOutSomething/CCA-web-scraper",
     "language": "python"
   },
   {
@@ -49,10 +49,10 @@
     "language": "vue"
   },
   {
-    "project_name": "Car park Finder",
-    "description": "An app that finds the nearest carpark from your current GPS location in Singapore",
+    "project_name": "Sound Mode",
+    "description": "A dart/flutter plugin to manage device's sound mode",
     "demo_url": null,
-    "github_url": "https://github.com/TryingOutSomething/cz2006-carpark-finder",
-    "language": "javascript"
+    "github_url": "https://github.com/TryingOutSomething/sound_mode",
+    "language": "dart"
   }
 ]
