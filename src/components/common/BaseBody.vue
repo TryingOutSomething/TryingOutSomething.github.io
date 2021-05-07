@@ -1,6 +1,6 @@
 <template>
   <v-container class="pa-0" fluid>
-    <v-card elevation="0" v-bind="$attrs" v-on="$listeners">
+    <v-card elevation="0" rounded="0" v-bind="$attrs" v-on="$listeners">
       <slot/>
     </v-card>
   </v-container>

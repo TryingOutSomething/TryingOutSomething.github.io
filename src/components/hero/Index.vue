@@ -15,9 +15,21 @@
 
       <template v-slot:scroll-icon>
         <v-row justify="center" class="pb-12 mb-5 pt-5">
-          <scroll-icon-small v-if="isMobileDevice" :txt-colour="white" />
+          <scroll-icon-small
+            v-if="isMobileDevice"
+            :txt-colour="white"
+            :arrow-id="toggleUseArrowAnimation"
+            :scroll-id="toggleUseEllipseSmallAnimation"
+            v-observe-visibility="trackViewportVisibilityConfig"
+          />
 
-          <scroll-icon v-else :txt-colour="white"/>
+          <scroll-icon
+            v-else
+            :txt-colour="white"
+            :arrow-id="toggleUseArrowAnimation"
+            :scroll-id="toggleUseEllipseAnimation"
+            v-observe-visibility="trackViewportVisibilityConfig"
+          />
         </v-row>
       </template>
     </content-body>
@@ -26,7 +38,7 @@
 
 <script>
 import { palette } from '@/mixins/design'
-import { screenSizeIdentifier } from '@/mixins/screen'
+import { determineElementViewport, screenSizeIdentifier } from '@/mixins/screen'
 
 export default {
   name: 'Hero',
@@ -37,11 +49,21 @@ export default {
     NavBar: () => import('./NavBar'),
     HeroTitle: () => import('./HeroTitle')
   },
-  mixins: [palette, screenSizeIdentifier],
+  mixins: [palette, screenSizeIdentifier, determineElementViewport],
 
   computed: {
     horizontalPaddingHeight () {
       return this.isMobileScreen ? '1rem' : '10rem'
+    },
+
+    toggleUseEllipseAnimation () {
+      return this.toggleAnimationInView('ellipse-wheel')
+    },
+    toggleUseEllipseSmallAnimation () {
+      return this.toggleAnimationInView('ellipse-wheel-small')
+    },
+    toggleUseArrowAnimation () {
+      return this.toggleAnimationInView('scroll-down-arrow')
     }
   }
 }

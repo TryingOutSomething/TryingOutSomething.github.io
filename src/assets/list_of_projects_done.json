@@ -10,15 +10,8 @@
     "project_name": "Binary To Decimal",
     "description": "A web project to converts binary value inputs to their decimal form",
     "demo_url": "https://csb-sm425-hqeyvdokn.vercel.app/",
-    "github_url": "https://github.com/TryingOutSomething/Zoomba",
+    "github_url": "https://github.com/TryingOutSomething/binary-decimal-converter",
     "language": "vue"
-  },
-  {
-    "project_name": "Youtube Video Bot",
-    "description": "A Telegram bot service that queries Youtube videos",
-    "demo_url": null,
-    "github_url": "https://github.com/TryingOutSomething/Telegram-bot-Vanilla",
-    "language": "node"
   },
   {
     "project_name": "Zoomba",
@@ -29,10 +22,10 @@
   },
   {
     "project_name": "Sound Mode",
-    "description": "A plugin to manage device's sound mode",
+    "description": "A dart/flutter plugin to manage device's sound mode",
     "demo_url": null,
     "github_url": "https://github.com/TryingOutSomething/sound_mode",
-    "language": "flutter"
+    "language": "dart"
   },
   {
     "project_name": "NP CCA Web Scraper",
@@ -45,14 +38,21 @@
     "project_name": "Snapee Bot",
     "description": "A Telegram bot service that allows users to exchange, redeem and use shopping vouchers from Snapee",
     "demo_url": null,
-    "github_url": "https://github.com/TryingOutSomething/Snapee",
+    "github_url": "https://github.com/TryingOutSomething/SnapeeBot",
     "language": "python"
   },
   {
     "project_name": "Match In A Snap",
     "description": "A website that recommends food places base on user's preference and their location",
-    "demo_url": null,
+    "demo_url": "https://tryingoutsomething.github.io/match-in-a-snap/",
     "github_url": "https://github.com/TryingOutSomething/match-in-a-snap",
     "language": "vue"
+  },
+  {
+    "project_name": "Car park Finder",
+    "description": "An app that finds the nearest carpark from your current GPS location in Singapore",
+    "demo_url": null,
+    "github_url": "https://github.com/TryingOutSomething/cz2006-carpark-finder",
+    "language": "javascript"
   }
 ]

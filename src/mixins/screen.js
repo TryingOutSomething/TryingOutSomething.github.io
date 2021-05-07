@@ -52,3 +52,14 @@ export const determineElementViewport = {
     }
   }
 }
+
+export const scrollAnimationProps = {
+  props: {
+    arrowId: {
+      type: String
+    },
+    scrollId: {
+      type: String
+    }
+  }
+}
