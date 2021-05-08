@@ -3,8 +3,15 @@
     <div>
       <span class="footer">{{ content.toolsCreated.title }}:</span>
 
-      <base-icon :class="iconPaddingBeforeText" :icon="content.toolsCreated.icons[0]"/>
-      <base-icon class="pl-sm-0" :icon="content.toolsCreated.icons[1]"/>
+      <base-icon
+        :class="iconPaddingBeforeText"
+        :icon="content.toolsCreated.tools[0].icon"
+        :title="content.toolsCreated.tools[0].alt"
+      />
+      <base-icon
+        :icon="content.toolsCreated.tools[1].icon"
+        :title="content.toolsCreated.tools[1].alt"
+        class="pl-sm-0"/>
     </div>
 
     <span class="footer">{{ content.copyright.desktop }}</span>

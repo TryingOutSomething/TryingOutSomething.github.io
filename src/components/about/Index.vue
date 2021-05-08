@@ -24,7 +24,7 @@
     <template v-slot:skill-icons>
       <v-row justify="center">
         <v-col lg="7" md="9" sm="11" cols="11">
-          <v-col offset-sm="1" class="pl-sm-10 pl-md-11">
+          <v-col class="pl-sm-10 pl-md-12 ml-md-6 ml-sm-5 ml-lg-3 ml-xl-12">
             <h2 class="mb-7 mt-5 subtitle-bold">
               Skills accumulated:
             </h2>

@@ -35,6 +35,10 @@ export default {
           src: require('@/assets/nodejs_logo.png')
         },
         {
+          name: 'Spring logo',
+          src: require('@/assets/spring_logo.svg')
+        },
+        {
           name: 'VueJS logo',
           src: require('@/assets/vuejs_logo.png')
         },

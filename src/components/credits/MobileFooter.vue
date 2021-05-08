@@ -37,11 +37,11 @@
 
       <base-icon
         :class="iconPaddingBeforeText"
-        :icon="content.toolsCreated.icons[0]"
+        :icon="content.toolsCreated.tools[0].icon"
         :size="toolsIconSize"
       />
       <base-icon
-        :icon="content.toolsCreated.icons[1]"
+        :icon="content.toolsCreated.tools[1].icon"
         :size="toolsIconSize"
       />
     </v-row>

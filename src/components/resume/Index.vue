@@ -38,7 +38,7 @@ export default {
 
   data () {
     return {
-      pdfSrc: 'Jan_Owyeong_Resume_2021.pdf'
+      pdfSrc: 'Jan_Owyeong_Guo_Yong_Resume.pdf'
     }
   }
 }

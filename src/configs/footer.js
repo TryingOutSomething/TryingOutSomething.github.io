@@ -1,7 +1,16 @@
 export const staticContent = {
   toolsCreated: {
     title: 'Created With:',
-    icons: ['mdi-vuejs', 'mdi-vuetify']
+    tools: [
+      {
+        icon: 'mdi-vuejs',
+        alt: 'Vue.js'
+      },
+      {
+        icon: 'mdi-vuetify',
+        alt: 'Vuetify'
+      }
+    ]
   },
 
   copyright: {
