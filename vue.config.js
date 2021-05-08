@@ -9,5 +9,6 @@ module.exports = {
     open: false,
     disableHostCheck: true
   },
+  publicPath: '/',
   productionSourceMap: false
 }
