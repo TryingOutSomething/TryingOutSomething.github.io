@@ -26,7 +26,7 @@ export const staticContent = {
     platform: [
       {
         icon: 'mdi-email',
-        url: 'mailto:jan.owyeong123@gmail.com'
+        url: 'mailto:janowyeong@hotmail.com'
       },
       {
         icon: 'mdi-github',
