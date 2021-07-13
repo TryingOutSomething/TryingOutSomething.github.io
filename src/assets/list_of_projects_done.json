@@ -15,7 +15,7 @@
   },
   {
     "project_name": "Car park Finder",
-    "description": "•A mobile application that finds the nearest car park from your current location and displays the number of available lots for that car park.",
+    "description": "A mobile application that finds the nearest car park from your current location and displays the number of available lots for that car park.",
     "demo_url": null,
     "github_url": "https://github.com/TryingOutSomething/cz2006-carpark-finder",
     "language": "javascript"

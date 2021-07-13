@@ -1,4 +1,6 @@
 $float-up-origin: -2vh;
+$desktop-scroll-transition-midpoint: 28px;
+$mobile-scroll-transition-midpoint: -17px;
 $svg-translate-origin: 0;
 
 .wave-hand {
@@ -46,7 +48,7 @@ $svg-translate-origin: 0;
     transform: translateY($svg-translate-origin)
   }
   50% {
-    transform: translateY(19%);
+    transform: translateY($desktop-scroll-transition-midpoint);
   }
   100% {
     transform: translateY($svg-translate-origin);
@@ -64,7 +66,7 @@ $svg-translate-origin: 0;
     transform: translateY($svg-translate-origin)
   }
   50% {
-    transform: translateY(-20%);
+    transform: translateY($mobile-scroll-transition-midpoint);
   }
   100% {
     transform: translateY($svg-translate-origin)

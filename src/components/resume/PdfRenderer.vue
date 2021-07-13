@@ -1,6 +1,7 @@
 <template>
   <v-row justify="center">
     <object
+      aria-label="Resume"
       :data="pdfSrc"
       class="pdf-display"
       type="application/pdf"/>
