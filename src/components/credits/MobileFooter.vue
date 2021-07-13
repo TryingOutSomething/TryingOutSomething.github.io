@@ -3,22 +3,24 @@
     <h3 class="custom-white mobile-footer text-center">{{ content.socials.title }}</h3>
 
     <v-row class="mt-5 mb-7" justify="center">
-      <a :href="content.socials.platform[0].url" target="_blank">
+      <a :href="content.socials.platform[0].url" aria-label="Email" rel="noopener noreferrer" target="_blank">
         <base-icon
+          class="mx-1"
           :class="iconPaddingBeforeText"
           :icon="content.socials.platform[0].icon"
           :size="socialIconSize"
         />
       </a>
-      <a :href="content.socials.platform[1].url" target="_blank">
+      <a :href="content.socials.platform[1].url" aria-label="Github" rel="noopener noreferrer" target="_blank">
         <base-icon
-          class="pr-2"
+          class="pr-2 mx-1"
           :icon="content.socials.platform[1].icon"
           :size="socialIconSize"
         />
       </a>
-      <a :href="content.socials.platform[2].url" target="_blank">
+      <a :href="content.socials.platform[2].url" aria-label="Linkedin" rel="noopener noreferrer" target="_blank">
         <base-icon
+          class="mx-1"
           :icon="content.socials.platform[2].icon"
           :size="socialIconSize"
         />
@@ -56,8 +58,8 @@ export default {
   data () {
     return {
       iconPaddingBeforeText: 'px-2',
-      socialIconSize: '1.69rem',
-      toolsIconSize: '1rem',
+      socialIconSize: '1.8rem',
+      toolsIconSize: '1.2rem',
       content: staticContent
     }
   }

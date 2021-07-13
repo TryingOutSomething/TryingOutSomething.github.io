@@ -1,5 +1,5 @@
 <template>
-  <a :download="pdfSrc" :href="pdfSrc">
+  <a :download="pdfSrc" :href="pdfSrc" aria-label="DownloadResumePdf">
     <text-button
       x-large
       :color="bgColour"

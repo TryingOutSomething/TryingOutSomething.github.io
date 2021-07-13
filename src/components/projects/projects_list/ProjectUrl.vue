@@ -2,7 +2,7 @@
   <v-overlay v-if="onHover" absolute opacity="0.7">
     <v-col>
       <v-row :class="hasDemoUrlAddPadding" justify="center">
-        <a :href="gitUrl" target="_blank">
+        <a :href="gitUrl" aria-label="GitUrl" rel="noopener noreferrer" target="_blank">
           <text-button
             class="py-6 align-center"
             icon-name="mdi-github"
@@ -13,7 +13,7 @@
       </v-row>
 
       <v-row v-if="projectUrl" class="mt-4" justify="center">
-        <a :href="projectUrl" target="_blank">
+        <a :href="projectUrl" aria-label="DemoUrl" rel="noopener noreferrer" target="_blank">
           <text-button
             class="px-9 py-6" :color="yellow"
             text="View Project"
