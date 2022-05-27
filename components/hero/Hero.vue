@@ -10,7 +10,10 @@
               aria-controls="mobile-menu"
               aria-expanded="false"
               class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700
-              hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" type="button">
+              hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              type="button"
+              @click="toggleMenuItemsVisibility"
+            >
               <!--
               Icon when menu is closed.
 
@@ -66,7 +69,7 @@
         </div>
       </div>
       <!-- Mobile menu, show/hide based on menu state. -->
-      <div id="mobile-menu" class="flex justify-center sm:hidden">
+      <div v-if="showMenuMobile" id="mobile-menu" class="flex justify-center sm:hidden">
         <div class="space-y-1 px-2 pt-2 pb-3">
           <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
           <a
@@ -98,13 +101,28 @@
     </div>
 
     <!-- SVG -->
-    <div class="text-p-white flex h-32 justify-center">svg</div>
+    <div class="text-p-white flex justify-center">
+      <scroll-down/>
+    </div>
   </div>
 </template>
 
 <script>
+import ScrollDown from '~/components/hero/svg/ScrollDown';
+
 export default {
-  name: 'NuxtHero'
+  name: 'NuxtHero',
+  components: { ScrollDown },
+  data() {
+    return {
+      showMenuMobile: false
+    };
+  },
+  methods: {
+    toggleMenuItemsVisibility() {
+      this.showMenuMobile = !this.showMenuMobile;
+    }
+  }
 };
 </script>
 
