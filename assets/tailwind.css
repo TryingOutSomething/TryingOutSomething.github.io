@@ -1,0 +1,8 @@
+@tailwind base;
+@layer base {
+  html {
+    @apply font-poppins;
+  }
+}
+@tailwind components;
+@tailwind utilities;
