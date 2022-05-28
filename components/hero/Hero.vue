@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-p-black flex h-screen flex-col">
+  <div class="bg-p-black flex min-h-screen flex-col">
     <nav class="bg-p-black">
       <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
@@ -91,18 +91,17 @@
 
     <div class="flex h-screen items-center justify-center">
       <div class="text-center text-p-white">
-        <h1 class="mb-10 text-6xl lg:text-8xl font-poppins font-bold">
+        <h1 class="mb-10 text-6xl lg:text-8xl font-bold">
           Hello There!
-          <span>👋🏻</span>
+          <span class="hidden sm:inline">👋🏻</span>
         </h1>
 
-        <div class="text-3xl lg:text-5xl">I'm Jan Owyeong!</div>
-      </div>
-    </div>
+        <div class="text-4xl mb-10 sm:hidden inline">👋🏻</div>
 
-    <!-- SVG -->
-    <div class="text-p-white flex justify-center pb-5">
-      <scroll-down/>
+        <div class="text-2xl lg:text-5xl">I'm Jan Owyeong!</div>
+
+        <scroll-down class="text-p-white flex justify-center pb-10 sm:pb-5"/>
+      </div>
     </div>
   </div>
 </template>
