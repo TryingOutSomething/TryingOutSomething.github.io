@@ -1,31 +1,35 @@
 <template>
   <div class="bg-p-white flex min-h-screen flex-col items-center justify-center">
-    <div>
-      <h1 class="my-10 text-center uppercase">about me</h1>
-      <p class="px-20 xl:px-72">I’m a computer science student at Nanyang Technological University that does random
-        projects during my free time. I love to try out new technologies that increase my work productivity and reading
-        blog articles about tech-related implementations. I am eager to gain practical experience and apply the theory
-        techniques learnt in school to build software.</p>
+    <div class="space-y-10 sm:space-y-24">
+      <h1
+        class="text-center uppercase font-black
+        text-4xl mt-20
+        sm:text-5xl sm:mt-10"
+      >
+        about me
+      </h1>
 
-      <div class="px-20 xl:px-96 border">
-        <h2 class="mt-10 mb-5">Skills accumulated:</h2>
+      <p class="px-20 xl:px-72 text-lg sm:text-xl">
+        I’m a computer science student at Nanyang Technological University
+        that does random projects during my free time. I love to try out new technologies that increase my work
+        productivity and reading blog articles about tech-related implementations. I am eager to gain practical
+        experience and apply the theory techniques learnt in school to build software.
+      </p>
+
+      <div class="px-20 xl:px-96">
+        <h2 class="my-10 text-2xl font-bold">Skills accumulated:</h2>
+
         <div
-          class="grid place-items-center gap-3
-          grid-cols-2
-          sm:grid-cols-3
-          md:grid-cols-3
-          lg:grid-cols-4
-          xl:grid-cols-8">
-          <img alt="Python Logo" class="h-24 border-2 border-2" src="~/assets/images/python_logo.png"/>
-          <img alt="Javascript Logo" class="h-24 border-2" src="~/assets/images/js_logo.png"/>
-          <img alt="Java Logo" class="h-24 border-2" src="~/assets/images/java_logo.png"/>
-          <img alt="NodeJS Logo" class="h-24 border-2" src="~/assets/images/nodejs_logo.png"/>
-          <img alt="Spring Logo" class="h-24 border-2" src="~/assets/images/spring_logo.svg"/>
-          <img alt="VueJS Logo" class="h-24 border-2" src="~/assets/images/vuejs_logo.png"/>
-          <img alt="Firebase Logo" class="h-24 border-2" src="~/assets/images/firebase_logo.png"/>
-          <img alt="MySQL Logo" class="h-24 border-2" src="~/assets/images/mysql_logo.png"/>
-          <img alt="MongoDB Logo" class="h-24 border-2" src="~/assets/images/mongodb_logo.png"/>
-          <img alt="Git Logo" class="h-24 border-2" src="~/assets/images/git_logo.png"/>
+          class="mb-10 sm:mb-0
+          grid place-items-center gap-3
+          grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6"
+        >
+          <img
+            v-for="(logo, i) in logoNames"
+            :key="i"
+            :alt="logo.alt"
+            :src="require(`~/assets/images/${logo.name}`)"
+            class="max-h-24"/>
         </div>
       </div>
     </div>
@@ -34,7 +38,23 @@
 
 <script>
 export default {
-  name: 'NuxtAbout'
+  name: 'NuxtAbout',
+  data() {
+    return {
+      logoNames: [
+        { name: 'python_logo.png', alt: 'Python Logo' },
+        { name: 'js_logo.png', alt: 'Javascript Logo' },
+        { name: 'java_logo.png', alt: 'Java Logo' },
+        { name: 'nodejs_logo.png', alt: 'NodeJS Logo' },
+        { name: 'spring_logo.svg', alt: 'Spring Logo' },
+        { name: 'vuejs_logo.png', alt: 'VueJS Logo' },
+        { name: 'firebase_logo.png', alt: 'Firebase Logo' },
+        { name: 'mysql_logo.png', alt: 'MySQL Logo' },
+        { name: 'mongodb_logo.png', alt: 'MongoDB Logo' },
+        { name: 'git_logo.png', alt: 'Git Logo' }
+      ]
+    };
+  }
 };
 </script>
 
