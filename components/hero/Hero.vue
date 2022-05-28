@@ -101,7 +101,7 @@
     </div>
 
     <!-- SVG -->
-    <div class="text-p-white flex justify-center">
+    <div class="text-p-white flex justify-center pb-5">
       <scroll-down/>
     </div>
   </div>
