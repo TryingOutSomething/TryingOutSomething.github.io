@@ -48,17 +48,17 @@
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
               <a
                 aria-current="page"
-                class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-p-white"
-                href="#">
+                class="rounded-md  px-3 py-2 text-sm font-medium text-p-white hover:bg-gray-700"
+                href="#about">
                 About
               </a>
               <a
-                class="rounded-md px-3 py-2 text-sm font-medium text-p-white"
+                class="rounded-md px-3 py-2 text-sm font-medium text-p-white hover:bg-gray-700"
                 href="#">
                 Projects
               </a>
               <a
-                class="rounded-md px-3 py-2 text-sm font-medium text-p-white"
+                class="rounded-md px-3 py-2 text-sm font-medium text-p-white hover:bg-gray-700"
                 href="#">
                 Resume
               </a>

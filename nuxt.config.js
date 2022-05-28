@@ -18,7 +18,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ['~/assets/styles/scroll.css'],
 
   tailwindcss: {
     cssPath: '~/assets/tailwind.css'
