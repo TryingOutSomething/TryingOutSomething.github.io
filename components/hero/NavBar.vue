@@ -54,7 +54,7 @@
               </a>
               <a
                 class="rounded-md px-3 py-2 text-sm font-medium text-p-white hover:bg-gray-700"
-                href="#">
+                href="#projects">
                 Projects
               </a>
               <a

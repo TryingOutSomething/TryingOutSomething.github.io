@@ -2,6 +2,7 @@
   <div class="scroll-smooth">
     <Hero/>
     <About/>
+    <Projects/>
   </div>
 </template>
 
