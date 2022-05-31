@@ -1,14 +1,14 @@
 <template>
-  <div id="resume" class="bg-p-white flex h-screen flex-col">
+  <div id="resume" class="bg-p-white flex h-screen md:h-screen-90 lg:h-screen-70 xl:h-screen flex-col">
     <h1 class="mt-10 sm:mt-20 text-center uppercase font-black text-4xl sm:text-5xl mb-7 sm:mb-0">resume</h1>
 
     <!--      <div class="flex h-screen flex-row items-center justify-center">-->
     <client-only>
       <div
         class="h-screen grid place-items-center
-        grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2
+        grid-cols-1 sm:grid-cols-2 md:grid-cols-1 xl:grid-cols-2
         mb-12
-        sm:mb-0 sm:px-12 sm:mt-10 sm:mb-14
+        sm:px-12 sm:mt-10 sm:mb-20
         md:px-0 md:mt-0 md:mb-0
         lg:px-44
         xl:px-64
@@ -23,10 +23,10 @@
 
         <div
           class="space-y-7 sm:space-y-10 md:space-y-0
-          md:space-x-5 lg:space-x-0 lg:space-y-16
+          md:space-x-5 xl:space-x-0 xl:space-y-16
           mt-10 sm:mt-0
           md:flex md:flex-row md:items-center md:justify-center
-          lg:block"
+          xl:block"
         >
           <button
             class="bg-p-yellow text-p-black font-medium rounded-md uppercase shadow-md
