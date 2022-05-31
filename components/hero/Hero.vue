@@ -1,8 +1,14 @@
 <template>
-  <div class="bg-p-black flex min-h-screen flex-col">
+  <div
+    class="bg-p-black flex flex-col
+    min-h-screen md:min-h-screen-80 xl:min-h-screen"
+  >
     <nav-bar class="bg-p-black"/>
 
-    <div class="flex flex-col h-screen items-center justify-center">
+    <div
+      class="flex flex-col items-center justify-center
+      h-screen md:h-screen-80 xl:h-screen"
+    >
       <div class="text-center text-p-white">
         <h1 class="mb-5 sm:mb-10 text-5xl md:text-7xl lg:text-8xl font-bold">
           Hello There!
@@ -13,8 +19,8 @@
 
         <div class="text-xl md:text-3xl lg:text-4xl">I'm Jan Owyeong!</div>
       </div>
-      <!--      <scroll-down class="text-p-white flex justify-center my-10 sm:my-20"/>-->
-      <scroll-down class="text-p-white flex justify-center mt-10 sm:mt-32"/>
+
+      <scroll-down class="text-p-white flex justify-center mt-10 md:mt-32"/>
     </div>
   </div>
 </template>

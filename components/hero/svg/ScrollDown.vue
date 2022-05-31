@@ -1,8 +1,8 @@
 <template>
   <div>
     <!--    <scroll-icon class="hidden sm:block mt-36"/>-->
-    <scroll-icon class="hidden sm:block"/>
-    <scroll-icon-small class="block sm:hidden"/>
+    <scroll-icon class="hidden md:block"/>
+    <scroll-icon-small class="block md:hidden"/>
     <!--    <scroll-icon-small class="block sm:hidden mt-12"/>-->
   </div>
 </template>
