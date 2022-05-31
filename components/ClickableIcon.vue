@@ -10,7 +10,7 @@ export default {
   props: {
     link: {
       type: String,
-      required: true
+      default: null
     }
   }
 };

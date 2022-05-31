@@ -1,7 +1,7 @@
 <template>
   <div class="bg-p-white flex flex-col px-5 md:max-w-sm rounded">
     <h3 class="py-7 capitalize text-lg sm:text-xl">{{ projectTitle }}</h3>
-    <p class="font-light text-sm sm:text-base">{{ projectDescription }}</p>
+    <p class="font-light text-sm sm:text-base flex-grow">{{ projectDescription }}</p>
     <!-- language -->
     <div class="flex flex-row justify-between pt-12 pb-5 items-center">
       <div class="flex flex-row space-x-2.5 items-center">
@@ -43,7 +43,7 @@ export default {
   },
   computed: {
     projectTitle() {
-      return this.projectInfo.title;
+      return this.projectInfo.project_name;
     },
     projectDescription() {
       return this.projectInfo.description;
@@ -52,21 +52,21 @@ export default {
       return this.projectInfo.language;
     },
     projectLanguageColour() {
-      return this.projectInfo.languageColour;
+      return this.projectInfo.language_colour;
     },
     projectGitUrl() {
-      return this.projectInfo.gitUrl;
+      return this.projectInfo.github_url;
     },
     projectDemoUrl() {
-      return this.projectInfo.projectUrl;
+      return this.projectInfo.demo_url;
     },
     hasProjectDemoUrl() {
-      return this.projectInfo.projectUrl !== null &&
-        this.projectInfo.projectUrl !== undefined;
+      return this.projectInfo.demo_url !== null &&
+        this.projectInfo.demo_url !== undefined;
     },
     hasGitUrl() {
-      return this.projectInfo.gitUrl !== null &&
-        this.projectInfo.gitUrl !== undefined;
+      return this.projectInfo.github_url !== null &&
+        this.projectInfo.github_url !== undefined;
     }
   },
 };

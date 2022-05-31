@@ -7,7 +7,7 @@
 
       <div class="px-10 2xl:px-96">
         <div class="grid gap-5 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          <project-card v-for="i in 8" :key="i" :project-info="project"/>
+          <project-card v-for="(project, i) in $getProjectList()" :key="i" :project-info="project"/>
         </div>
       </div>
     </div>
@@ -24,14 +24,14 @@ export default {
   },
   data() {
     return {
-      project: {
-        title: 'multi-disciplinary projects',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
-        language: 'language',
-        languageColour: '#c4c4c4',
-        gitUrl: 'https://www.google.com.sg',
-        projectUrl: 'https://www.github.com'
-      }
+      // project: {
+      //   title: 'multi-disciplinary projects',
+      //   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+      //   language: 'language',
+      //   languageColour: '#c4c4c4',
+      //   gitUrl: 'https://www.google.com.sg',
+      //   projectUrl: 'https://www.github.com'
+      // }
     };
   }
 };

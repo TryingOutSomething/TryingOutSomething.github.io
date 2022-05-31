@@ -27,7 +27,8 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { src: '~/plugins/vue-material-design-icons', mode: 'client' },
-    '~/plugins/v-viewer.js'
+    '~/plugins/v-viewer.js',
+    '~/plugins/project-list.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
