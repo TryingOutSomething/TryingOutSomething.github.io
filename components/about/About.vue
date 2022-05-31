@@ -4,23 +4,23 @@
       <h1
         class="text-center uppercase font-black
         text-4xl mt-20
-        sm:text-5xl sm:mt-10"
+        sm:text-5xl md:mt-10"
       >
         about me
       </h1>
 
-      <p class="px-12 sm:px-20 xl:px-72 sm:text-xl text-center sm:text-left">
+      <p class="px-12 sm:px-20 xl:px-72 2xl:px-96 sm:text-xl text-center sm:text-left">
         I’m a computer science student at Nanyang Technological University
         that does random projects during my free time. I love to try out new technologies that increase my work
         productivity and reading blog articles about tech-related implementations. I am eager to gain practical
         experience and apply the theory techniques learnt in school to build software.
       </p>
 
-      <div class="px-20 xl:px-96">
+      <div class="px-12 sm:px-20 xl:px-80 2xl:px-128">
         <h2 class="my-10 text-xl sm:text-2xl text-center sm:text-left font-bold">Skills accumulated:</h2>
 
         <div
-          class="mb-10 sm:mb-0
+          class="mb-20 lg:mb-0
           grid place-items-center gap-3
           grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6"
         >
