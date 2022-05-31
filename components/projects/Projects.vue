@@ -21,18 +21,6 @@ export default {
   name: 'NuxtProjects',
   components: {
     ProjectCard
-  },
-  data() {
-    return {
-      // project: {
-      //   title: 'multi-disciplinary projects',
-      //   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
-      //   language: 'language',
-      //   languageColour: '#c4c4c4',
-      //   gitUrl: 'https://www.google.com.sg',
-      //   projectUrl: 'https://www.github.com'
-      // }
-    };
   }
 };
 </script>

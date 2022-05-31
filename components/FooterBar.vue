@@ -11,15 +11,15 @@
           <p class="text-lg">Connect with me:</p>
 
           <div class="flex flex-row space-x-3 justify-center my-5">
-            <a :href="emailLink" aria-label="Email" rel="noopener noreferrer" target="_blank">
+            <clickable-icon :aria-label="email.ariaLabel" :link="email.link">
               <email-icon/>
-            </a>
-            <a :href="githubLink" aria-label="Github" rel="noopener noreferrer" target="_blank">
+            </clickable-icon>
+            <clickable-icon :aria-label="github.ariaLabel" :link="github.link">
               <github-icon/>
-            </a>
-            <a :href="linkedInLink" aria-label="LinkedIn" rel="noopener noreferrer" target="_blank">
+            </clickable-icon>
+            <clickable-icon :aria-label="linkedIn.ariaLabel" :link="linkedIn.link">
               <linkedin-icon/>
-            </a>
+            </clickable-icon>
           </div>
         </div>
       </client-only>
@@ -58,15 +58,15 @@
       <client-only>
         <div class="flex flex-row space-x-2.5 items-center justify-center">
           <div>Connect with me:</div>
-          <a :href="emailLink" aria-label="Email" rel="noopener noreferrer" target="_blank">
+          <clickable-icon :aria-label="email.ariaLabel" :link="email.link">
             <email-icon/>
-          </a>
-          <a :href="githubLink" aria-label="Github" rel="noopener noreferrer" target="_blank">
+          </clickable-icon>
+          <clickable-icon :aria-label="github.ariaLabel" :link="github.link">
             <github-icon/>
-          </a>
-          <a :href="linkedInLink" aria-label="LinkedIn" rel="noopener noreferrer" target="_blank">
+          </clickable-icon>
+          <clickable-icon :aria-label="linkedIn.ariaLabel" :link="linkedIn.link">
             <linkedin-icon/>
-          </a>
+          </clickable-icon>
         </div>
       </client-only>
     </div>
@@ -79,9 +79,18 @@ export default {
     return {
       mobileToolsIconSize: 18,
       mobileConnectIconSize: 32,
-      emailLink: 'mailto:janowyeong@hotmail.com',
-      githubLink: 'https://github.com/TryingOutSomething',
-      linkedInLink: 'https://www.linkedin.com/in/jan-owyeong-guo-yong-04333774/',
+      email: {
+        link: 'mailto:janowyeong@hotmail.com',
+        ariaLabel: 'Email'
+      },
+      github: {
+        link: 'https://github.com/TryingOutSomething',
+        ariaLabel: 'Github'
+      },
+      linkedIn: {
+        link: 'https://www.linkedin.com/in/jan-owyeong-guo-yong/',
+        ariaLabel: 'LinkedIn'
+      }
     };
   }
 };

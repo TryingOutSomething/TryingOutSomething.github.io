@@ -11,11 +11,11 @@
 
       <client-only>
         <div class="flex flex-row space-x-3 items-center">
-          <clickable-icon :link="projectGitUrl">
+          <clickable-icon :aria-label="projectGitAriaLabel" :link="projectGitUrl">
             <github-icon v-if="hasGitUrl" :fill-color="linkFillColor" :size="iconSize"/>
           </clickable-icon>
 
-          <clickable-icon :link="projectDemoUrl">
+          <clickable-icon :aria-label="projectDemoAriaLabel" :link="projectDemoUrl">
             <web-icon v-if="hasProjectDemoUrl" :fill-color="linkFillColor"/>
           </clickable-icon>
         </div>
@@ -55,18 +55,24 @@ export default {
       return this.projectInfo.language_colour;
     },
     projectGitUrl() {
-      return this.projectInfo.github_url;
+      return this.projectInfo.github.url;
+    },
+    projectGitAriaLabel() {
+      return this.projectInfo.github.url;
     },
     projectDemoUrl() {
-      return this.projectInfo.demo_url;
+      return this.projectInfo.demo.url;
+    },
+    projectDemoAriaLabel() {
+      return this.projectInfo.demo.url;
     },
     hasProjectDemoUrl() {
-      return this.projectInfo.demo_url !== null &&
-        this.projectInfo.demo_url !== undefined;
+      return this.projectInfo.demo.url !== null &&
+        this.projectInfo.demo.url !== undefined;
     },
     hasGitUrl() {
-      return this.projectInfo.github_url !== null &&
-        this.projectInfo.github_url !== undefined;
+      return this.projectInfo.github.url !== null &&
+        this.projectInfo.github.url !== undefined;
     }
   },
 };

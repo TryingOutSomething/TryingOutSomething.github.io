@@ -1,5 +1,5 @@
 <template>
-  <a :href="link" rel="noopener noreferrer" target="_blank">
+  <a :aria-label="ariaLabel" :href="link" rel="noopener noreferrer" target="_blank">
     <slot/>
   </a>
 </template>
@@ -9,6 +9,10 @@ export default {
   name: 'ClickableIcon',
   props: {
     link: {
+      type: String,
+      default: null
+    },
+    ariaLabel: {
       type: String,
       default: null
     }
