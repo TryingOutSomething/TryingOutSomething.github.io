@@ -21,11 +21,10 @@
 
 <script>
 import ScrollDown from '~/components/hero/svg/ScrollDown';
-import NavBar from '~/components/hero/NavBar';
 
 export default {
   name: 'NuxtHero',
-  components: { NavBar, ScrollDown }
+  components: { ScrollDown }
 };
 </script>
 
