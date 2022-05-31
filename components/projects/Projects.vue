@@ -1,7 +1,7 @@
 <template>
   <div id="projects" class="bg-p-black flex min-h-screen flex-col items-center justify-center">
     <div class="space-y-20 my-20">
-      <h1 class="text-p-white text-center uppercase font-black text-5xl">
+      <h1 class="text-p-white text-center uppercase font-black text-4xl sm:text-5xl">
         projects created
       </h1>
 
