@@ -33,13 +33,20 @@
             view resume
           </button>
 
-          <button
-            class="bg-p-brown text-p-white font-medium rounded-md uppercase shadow-md
-            flex flex-row items-center justify-center py-5 px-10"
+          <a
+            :download="resumePdfPath"
+            :href="resumePdfPath"
+            aria-label="DownloadResumePdf"
+            class="flex"
           >
-            <download-icon class="pr-1.5"/>
-            download
-          </button>
+            <button
+              class="bg-p-brown text-p-white font-medium rounded-md uppercase shadow-md
+            flex flex-row items-center justify-center py-5 px-10"
+            >
+              <download-icon class="pr-1.5"/>
+              download
+            </button>
+          </a>
         </div>
       </div>
     </client-only>
@@ -53,6 +60,7 @@ export default {
   name: 'NuxtResume',
   data() {
     return {
+      resumePdfPath: 'Jan_Owyeong_Guo_Yong_Resume.pdf',
       resumeImagePath: `${require('~/assets/images/Jan_Owyeong_Guo_Yong_Resume_preview.jpg')}`,
       viewConfig: {
         toolbar: {
