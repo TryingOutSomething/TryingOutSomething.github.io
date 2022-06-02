@@ -17,6 +17,7 @@ module.exports = {
         128: '32rem'
       },
       minHeight: {
+        'screen-50': '50vh',
         'screen-80': '80vh',
         'screen-90': '90vh'
       },
