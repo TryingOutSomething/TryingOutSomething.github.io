@@ -4,6 +4,7 @@
     <About/>
     <Projects/>
     <Resume/>
+    <scroll-to-top/>
   </div>
 </template>
 
