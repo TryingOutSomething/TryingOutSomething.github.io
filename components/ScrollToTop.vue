@@ -1,19 +1,21 @@
 <template>
   <client-only>
     <div
-      v-show="hasScrolledDown"
       class="fixed bottom-5 right-5 hidden lg:block"
     >
-      <button
-        class="flex items-center justify-center
+      <Transition name="inflate">
+        <button
+          v-show="hasScrolledDown"
+          class="flex items-center justify-center
         rounded-full text-white
         shadow-md hover:shadow-lg
         bg-p-gray hover:bg-gray-400
         w-16 h-16"
-        @click="scrollToTop"
-      >
-        <chevron-up-icon :size="iconSize"/>
-      </button>
+          @click="scrollToTop"
+        >
+          <chevron-up-icon :size="iconSize"/>
+        </button>
+      </Transition>
     </div>
   </client-only>
 </template>
@@ -51,5 +53,20 @@ export default {
 </script>
 
 <style scoped>
+.inflate-enter-active {
+  animation: ease-in inflate 0.1s;
+}
 
+.inflate-leave-active {
+  animation: ease-in inflate 0.1s reverse;
+}
+
+@keyframes inflate {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
 </style>
