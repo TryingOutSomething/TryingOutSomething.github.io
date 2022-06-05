@@ -1,6 +1,6 @@
 <template>
   <svg fill="none" height="153" viewBox="0 0 50 153" width="50" xmlns="http://www.w3.org/2000/svg">
-    <g id="scroll-icon">
+    <g id="scrollIcon">
       <rect id="curved-body" height="75" rx="22.5" stroke="#F9F9F9" stroke-width="5" width="45" x="2.5" y="2.5"/>
       <path
         :id="arrowComponentId"

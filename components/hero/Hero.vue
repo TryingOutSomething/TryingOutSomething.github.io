@@ -49,22 +49,27 @@ export default {
     return {
       emojiElementProps: {
         id: 'handEmoji',
+        parentId: null,
         animationClassName: 'wave-hand'
       },
       ellipseProps: {
         id: 'ellipseWheel',
+        parentId: 'scrollIcon',
         animationClassName: 'ellipse-wheel'
       },
       ellipseSmallProps: {
         id: 'ellipseWheelSmall',
+        parentId: 'scrollIconSmall',
         animationClassName: 'ellipse-wheel-small'
       },
       scrollArrowProps: {
         id: 'scrollArrow',
+        parentId: 'scrollIcon',
         animationClassName: 'scroll-down-arrow'
       },
       scrollArrowSmallProps: {
         id: 'scrollArrowSmall',
+        parentId: 'scrollIconSmall',
         animationClassName: 'scroll-down-arrow'
       },
       observerOptions: {
@@ -86,18 +91,14 @@ export default {
   },
   methods: {
     elementsToObserve() {
-      const handEmojiElement = document.getElementById('handEmoji');
-      const scrollEllipseElement = document.getElementById('ellipseWheel');
-      const scrollArrowElement = document.getElementById('scrollArrow');
-      const scrollEllipseSmallElement = document.getElementById('ellipseWheelSmall');
-      const scrollArrowSmallElement = document.getElementById('scrollArrowSmall');
+      const handEmojiElement = document.getElementById(this.emojiElementProps.id);
+      const scrollDownElement = document.getElementById(this.ellipseProps.parentId);
+      const scrollDownSmallElement = document.getElementById(this.ellipseSmallProps.parentId);
 
       return [
         handEmojiElement,
-        scrollEllipseElement,
-        scrollArrowElement,
-        scrollEllipseSmallElement,
-        scrollArrowSmallElement
+        scrollDownElement,
+        scrollDownSmallElement
       ];
     },
     handleAnimationDisplay(entries, _) {
@@ -118,18 +119,19 @@ export default {
         case this.emojiElementProps.id:
           element.classList.add(this.emojiElementProps.animationClassName);
           return;
-        case this.scrollArrowProps.id:
-          element.classList.add(this.scrollArrowProps.animationClassName);
+        case this.ellipseProps.parentId:
+          this.addScrollDownAnimationGroupClass(element, this.scrollArrowProps, this.ellipseProps);
           return;
-        case this.ellipseProps.id:
-          element.classList.add(this.ellipseProps.animationClassName);
-          return;
-        case this.ellipseSmallProps.id:
-          element.classList.add(this.ellipseSmallProps.animationClassName);
-          return;
-        case this.scrollArrowSmallProps.id:
-          element.classList.add(this.scrollArrowProps.animationClassName);
+        case this.ellipseSmallProps.parentId:
+          this.addScrollDownAnimationGroupClass(element, this.scrollArrowSmallProps, this.ellipseSmallProps);
       }
+    },
+    addScrollDownAnimationGroupClass(parentElement, scrollArrowProps, ellipseProps) {
+      const scrollArrowElement = parentElement.querySelector(`#${scrollArrowProps.id}`);
+      const ellipseElement = parentElement.querySelector(`#${ellipseProps.id}`);
+
+      scrollArrowElement.classList.add(scrollArrowProps.animationClassName);
+      ellipseElement.classList.add(ellipseProps.animationClassName);
     },
     removeAnimationClassToElement(element) {
       const id = element.id;
@@ -138,19 +140,20 @@ export default {
         case this.emojiElementProps.id:
           element.classList.remove(this.emojiElementProps.animationClassName);
           return;
-        case this.scrollArrowProps.id:
-          element.classList.remove(this.scrollArrowProps.animationClassName);
+        case this.ellipseProps.parentId:
+          this.removeScrollDownAnimationGroupClass(element, this.scrollArrowProps, this.ellipseProps);
           return;
-        case this.ellipseProps.id:
-          element.classList.remove(this.ellipseProps.animationClassName);
-          return;
-        case this.ellipseSmallProps.id:
-          element.classList.remove(this.ellipseSmallProps.animationClassName);
-          return;
-        case this.scrollArrowSmallProps.id:
-          element.classList.remove(this.scrollArrowProps.animationClassName);
+        case this.ellipseSmallProps.parentId:
+          this.removeScrollDownAnimationGroupClass(element, this.scrollArrowSmallProps, this.ellipseSmallProps);
       }
-    }
+    },
+    removeScrollDownAnimationGroupClass(parentElement, scrollArrowProps, ellipseProps) {
+      const scrollArrowElement = parentElement.querySelector(`#${scrollArrowProps.id}`);
+      const ellipseElement = parentElement.querySelector(`#${ellipseProps.id}`);
+
+      scrollArrowElement.classList.remove(scrollArrowProps.animationClassName);
+      ellipseElement.classList.remove(ellipseProps.animationClassName);
+    },
   }
 };
 </script>
