@@ -1,0 +1,95 @@
+:root {
+  --float-up-origin-pos: -2vh;
+  --desktop-scroll-midpoint: 28px;
+  --mobile-scroll-midpoint: -17px;
+  --svg-translate-origin-pos: 0;
+}
+
+.wave-hand {
+  animation-name: wave-hand-animation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave-hand-animation {
+  0% {
+    transform: rotate(0.0deg)
+  }
+  10% {
+    transform: rotate(14.0deg)
+  }
+  20% {
+    transform: rotate(-8.0deg)
+  }
+  30% {
+    transform: rotate(14.0deg)
+  }
+  40% {
+    transform: rotate(-4.0deg)
+  }
+  50% {
+    transform: rotate(10.0deg)
+  }
+  60% {
+    transform: rotate(0.0deg)
+  }
+  100% {
+    transform: rotate(0.0deg)
+  }
+}
+
+.ellipse-wheel {
+  animation-name: float-down;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes float-down {
+  0% {
+    transform: translateY(var(--svg-translate-origin-pos));
+  }
+  50% {
+    transform: translateY(var(--desktop-scroll-midpoint));
+  }
+  100% {
+    transform: translateY(var(--svg-translate-origin-pos));
+  }
+}
+
+.ellipse-wheel-small {
+  animation-name: float-opposite;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes float-opposite {
+  0% {
+    transform: translateY(var(--svg-translate-origin-pos));
+  }
+  50% {
+    transform: translateY(var(--mobile-scroll-midpoint));
+  }
+  100% {
+    transform: translateY(var(--svg-translate-origin-pos));
+  }
+}
+
+.scroll-down-arrow {
+  animation-name: float-up;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes float-up {
+  0% {
+    transform: translateY(var(--float-up-origin-pos));
+  }
+  50% {
+    transform: translateY(var(--svg-translate-origin-pos));
+  }
+  100% {
+    transform: translateY(var(--float-up-origin-pos));
+  }
+}
