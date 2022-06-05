@@ -7,10 +7,10 @@
         <button
           v-show="hasScrolledDown"
           class="flex items-center justify-center
-        rounded-full text-white
-        shadow-md hover:shadow-lg
-        bg-p-gray hover:bg-gray-400
-        w-16 h-16"
+          rounded-full text-white
+          shadow-md hover:shadow-lg
+          bg-p-gray hover:bg-gray-400
+          w-16 h-16"
           @click="scrollToTop"
         >
           <chevron-up-icon :size="iconSize"/>
