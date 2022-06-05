@@ -17,6 +17,7 @@
           </h1>
 
           <div
+            id="handEmoji"
             ref="handEmoji"
             class="mb-10
             w-11 sm:w-24 lg:w-32
@@ -29,7 +30,11 @@
         <div class="text-xl md:text-3xl lg:text-4xl">I'm Jan Owyeong!</div>
       </div>
 
-      <scroll-down class="text-p-white flex justify-center mt-10 md:mt-32"/>
+      <scroll-down
+        arrow-component-id="scrollArrow"
+        class="text-p-white flex justify-center mt-10 md:mt-32"
+        ellipse-component-id="ellipseWheel"
+      />
     </div>
   </div>
 </template>
@@ -42,7 +47,8 @@ export default {
   components: { ScrollDown },
   data() {
     return {
-      animationClassName: 'wave-hand',
+      emojiAnimationClassName: 'wave-hand',
+      scrollDownAnimationClassName: 'wave-hand',
       observerOptions: {
         root: null,
         rootMargin: '0px',
@@ -66,9 +72,9 @@ export default {
         const element = entry.target;
 
         if (entry.isIntersecting) {
-          element.classList.add(this.animationClassName);
+          element.classList.add(this.emojiAnimationClassName);
         } else {
-          element.classList.remove(this.animationClassName);
+          element.classList.remove(this.emojiAnimationClassName);
         }
       });
     }

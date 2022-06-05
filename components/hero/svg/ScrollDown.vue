@@ -1,9 +1,15 @@
 <template>
   <div>
-    <!--    <scroll-icon class="hidden sm:block mt-36"/>-->
-    <scroll-icon class="hidden md:block"/>
-    <scroll-icon-small class="block md:hidden"/>
-    <!--    <scroll-icon-small class="block sm:hidden mt-12"/>-->
+    <scroll-icon
+      :arrow-component-id="arrowComponentId"
+      :ellipse-component-id="ellipseComponentId"
+      class="hidden md:block"
+    />
+    <scroll-icon-small
+      :arrow-component-id="`${arrowComponentId}Small`"
+      :ellipse-component-id="`${ellipseComponentId}Small`"
+      class="block md:hidden"
+    />
   </div>
 </template>
 
@@ -16,6 +22,16 @@ export default {
   components: {
     ScrollIcon,
     ScrollIconSmall
+  },
+  props: {
+    ellipseComponentId: {
+      type: String,
+      required: true
+    },
+    arrowComponentId: {
+      type: String,
+      required: true
+    }
   }
 };
 </script>
