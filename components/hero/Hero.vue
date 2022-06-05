@@ -63,6 +63,10 @@ export default {
         id: 'scrollArrow',
         animationClassName: 'scroll-down-arrow'
       },
+      scrollArrowSmallProps: {
+        id: 'scrollArrowSmall',
+        animationClassName: 'scroll-down-arrow'
+      },
       observerOptions: {
         root: null,
         rootMargin: '0px',
@@ -86,12 +90,14 @@ export default {
       const scrollEllipseElement = document.getElementById('ellipseWheel');
       const scrollArrowElement = document.getElementById('scrollArrow');
       const scrollEllipseSmallElement = document.getElementById('ellipseWheelSmall');
+      const scrollArrowSmallElement = document.getElementById('scrollArrowSmall');
 
       return [
         handEmojiElement,
         scrollEllipseElement,
         scrollArrowElement,
-        scrollEllipseSmallElement
+        scrollEllipseSmallElement,
+        scrollArrowSmallElement
       ];
     },
     handleAnimationDisplay(entries, _) {
@@ -120,6 +126,9 @@ export default {
           return;
         case this.ellipseSmallProps.id:
           element.classList.add(this.ellipseSmallProps.animationClassName);
+          return;
+        case this.scrollArrowSmallProps.id:
+          element.classList.add(this.scrollArrowProps.animationClassName);
       }
     },
     removeAnimationClassToElement(element) {
@@ -137,6 +146,9 @@ export default {
           return;
         case this.ellipseSmallProps.id:
           element.classList.remove(this.ellipseSmallProps.animationClassName);
+          return;
+        case this.scrollArrowSmallProps.id:
+          element.classList.remove(this.scrollArrowProps.animationClassName);
       }
     }
   }
