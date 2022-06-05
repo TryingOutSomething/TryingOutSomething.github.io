@@ -6,7 +6,7 @@
       class="hidden md:block"
     />
     <scroll-icon-small
-      :arrow-component-id="`${arrowComponentId}Small`"
+      :arrow-component-id="arrowComponentId"
       :ellipse-component-id="`${ellipseComponentId}Small`"
       class="block md:hidden"
     />

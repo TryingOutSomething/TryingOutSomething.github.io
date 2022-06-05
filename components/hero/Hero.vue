@@ -47,8 +47,22 @@ export default {
   components: { ScrollDown },
   data() {
     return {
-      emojiAnimationClassName: 'wave-hand',
-      scrollDownAnimationClassName: 'wave-hand',
+      emojiElementProps: {
+        id: 'handEmoji',
+        animationClassName: 'wave-hand'
+      },
+      ellipseProps: {
+        id: 'ellipseWheel',
+        animationClassName: 'ellipse-wheel'
+      },
+      ellipseSmallProps: {
+        id: 'ellipseWheelSmall',
+        animationClassName: 'ellipse-wheel-small'
+      },
+      scrollArrowProps: {
+        id: 'scrollArrow',
+        animationClassName: 'scroll-down-arrow'
+      },
       observerOptions: {
         root: null,
         rootMargin: '0px',
@@ -59,7 +73,7 @@ export default {
   },
   mounted() {
     const observer = new IntersectionObserver(this.handleAnimationDisplay, this.observerOptions);
-    observer.observe(this.$refs.handEmoji);
+    this.elementsToObserve().forEach(element => observer.observe(element));
 
     this.observer = observer;
   },
@@ -67,16 +81,63 @@ export default {
     this.observer.disconnect();
   },
   methods: {
+    elementsToObserve() {
+      const handEmojiElement = document.getElementById('handEmoji');
+      const scrollEllipseElement = document.getElementById('ellipseWheel');
+      const scrollArrowElement = document.getElementById('scrollArrow');
+      const scrollEllipseSmallElement = document.getElementById('ellipseWheelSmall');
+
+      return [
+        handEmojiElement,
+        scrollEllipseElement,
+        scrollArrowElement,
+        scrollEllipseSmallElement
+      ];
+    },
     handleAnimationDisplay(entries, _) {
       entries.forEach(entry => {
         const element = entry.target;
 
         if (entry.isIntersecting) {
-          element.classList.add(this.emojiAnimationClassName);
+          this.addAnimationClassToElement(element);
         } else {
-          element.classList.remove(this.emojiAnimationClassName);
+          this.removeAnimationClassToElement(element);
         }
       });
+    },
+    addAnimationClassToElement(element) {
+      const id = element.id;
+
+      switch (id) {
+        case this.emojiElementProps.id:
+          element.classList.add(this.emojiElementProps.animationClassName);
+          return;
+        case this.scrollArrowProps.id:
+          element.classList.add(this.scrollArrowProps.animationClassName);
+          return;
+        case this.ellipseProps.id:
+          element.classList.add(this.ellipseProps.animationClassName);
+          return;
+        case this.ellipseSmallProps.id:
+          element.classList.add(this.ellipseSmallProps.animationClassName);
+      }
+    },
+    removeAnimationClassToElement(element) {
+      const id = element.id;
+
+      switch (id) {
+        case this.emojiElementProps.id:
+          element.classList.remove(this.emojiElementProps.animationClassName);
+          return;
+        case this.scrollArrowProps.id:
+          element.classList.remove(this.scrollArrowProps.animationClassName);
+          return;
+        case this.ellipseProps.id:
+          element.classList.remove(this.ellipseProps.animationClassName);
+          return;
+        case this.ellipseSmallProps.id:
+          element.classList.remove(this.ellipseSmallProps.animationClassName);
+      }
     }
   }
 };
@@ -114,6 +175,61 @@ export default {
   }
   100% {
     transform: rotate(0.0deg)
+  }
+}
+
+.ellipse-wheel {
+  animation-name: float-down;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes float-down {
+  0% {
+    transform: translateY(0)
+  }
+  50% {
+    transform: translateY(28px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.ellipse-wheel-small {
+  animation-name: float-opposite;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes float-opposite {
+  0% {
+    transform: translateY(0)
+  }
+  50% {
+    transform: translateY(-17px);
+  }
+  100% {
+    transform: translateY(0)
+  }
+}
+
+.scroll-down-arrow {
+  animation-name: float-up;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes float-up {
+  0% {
+    transform: translateY(-2vh);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-2vh);
   }
 }
 </style>
