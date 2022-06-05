@@ -12,10 +12,10 @@
       <div class="text-center text-p-white">
         <h1 class="mb-5 sm:mb-10 text-5xl md:text-7xl lg:text-8xl font-bold">
           Hello There!
-          <span class="hidden sm:inline">👋🏻</span>
+          <span ref="handEmojiDesktop" class="hidden sm:inline">👋🏻</span>
         </h1>
 
-        <div class="text-4xl mb-10 sm:hidden block">👋🏻</div>
+        <div ref="handEmojiMobile" class="text-4xl mb-10 sm:hidden block">👋🏻</div>
 
         <div class="text-xl md:text-3xl lg:text-4xl">I'm Jan Owyeong!</div>
       </div>
@@ -30,7 +30,41 @@ import ScrollDown from '~/components/hero/svg/ScrollDown';
 
 export default {
   name: 'NuxtHero',
-  components: { ScrollDown }
+  components: { ScrollDown },
+  data() {
+    return {
+      animationClassName: 'wave-hand',
+      observerOptions: {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.75
+      },
+      observer: null
+    };
+  },
+  mounted() {
+    const observer = new IntersectionObserver(this.handleAnimationDisplay, this.observerOptions);
+    observer.observe(this.$refs.handEmojiMobile);
+    observer.observe(this.$refs.handEmojiDesktop);
+
+    this.observer = observer;
+  },
+  beforeDestroy() {
+    this.observer.disconnect();
+  },
+  methods: {
+    handleAnimationDisplay(entries, _) {
+      entries.forEach(entry => {
+        const element = entry.target;
+
+        if (entry.isIntersecting) {
+          element.classList.add(this.animationClassName);
+        } else {
+          element.classList.remove(this.animationClassName);
+        }
+      });
+    }
+  }
 };
 </script>
 
