@@ -1,0 +1,106 @@
+[
+  {
+    "project_name": "Github Repo Viewer",
+    "description": "View trending repositories built by developers on Github using Vue3's Composition API.",
+    "demo": {
+      "url": "https://5f3546afd1ccbb70569b5a74--focused-cray-9a652d.netlify.app/",
+      "aria_label": "Github Repo Viewer"
+    },
+    "github": {
+      "url": "https://github.com/TryingOutSomething/github-repo-viewer-vue3",
+      "aria_label": "Github Repo Viewer Source Code"
+    },
+    "language": "vue"
+  },
+  {
+    "project_name": "Zoomba",
+    "description": "This project contains a demo of the landing page and admin CMS dashboard for Zoomba, a motion tracking desktop game.",
+    "demo": {
+      "url": "https://tryingoutsomething.github.io/Zoomba/",
+      "aria_label": "Zoomba Web App"
+    },
+    "github": {
+      "url": "https://github.com/TryingOutSomething/Zoomba",
+      "aria_label": "Zoomba Source Code"
+    },
+    "language": "vue"
+  },
+  {
+    "project_name": "Car park Finder",
+    "description": "A mobile application that finds the nearest car park from your current location and displays the number of available lots for that car park.",
+    "demo": {
+      "url": null,
+      "aria_label": null
+    },
+    "github": {
+      "url": "https://github.com/TryingOutSomething/cz2006-carpark-finder",
+      "aria_label": "Carpark Finder Source Code"
+    },
+    "language": "javascript"
+  },
+  {
+    "project_name": "Multi-Disciplinary Project",
+    "description": "A project to build a robot that navigates a maze. This repository contains the algorithm implementation for the robot.",
+    "demo": {
+      "url": null,
+      "aria_label": null
+    },
+    "github": {
+      "url": "https://github.com/HanYiChoong/MDP_Grp6_Algorithms",
+      "aria_label": "MDP Source Code"
+    },
+    "language": "python"
+  },
+  {
+    "project_name": "CCA Web Scraper",
+    "description": "An automated web scrapper that scrapes the Co-Curricular Activities (CCA) from Ngee Ann Polytechnic’s website",
+    "demo": {
+      "url": null,
+      "aria_label": null
+    },
+    "github": {
+      "url": "https://github.com/TryingOutSomething/CCA-web-scraper",
+      "aria_label": "CCA Web Scraper Viewer Source Code"
+    },
+    "language": "python"
+  },
+  {
+    "project_name": "Snapee Bot",
+    "description": "A Telegram bot service that allows users to manage and spend retail and restaurant vouchers earned by playing games and doing tasks.",
+    "demo": {
+      "url": null,
+      "aria_label": null
+    },
+    "github": {
+      "url": "https://github.com/TryingOutSomething/SnapeeBot",
+      "aria_label": "Snapee Source Code"
+    },
+    "language": "python"
+  },
+  {
+    "project_name": "Match In A Snap",
+    "description": "A website that recommends food places base on user's preference and their location.",
+    "demo": {
+      "url": "https://tryingoutsomething.github.io/match-in-a-snap/",
+      "aria_label": "Match In A Snap"
+    },
+    "github": {
+      "url": "https://github.com/TryingOutSomething/match-in-a-snap",
+      "aria_label": "Match In A Snap Source Code"
+    },
+    "language": "vue"
+  },
+  {
+    "project_name": "Sound Mode",
+    "description": "A dart/flutter plugin to manage device's sound mode",
+    "demo": {
+      "url": null,
+      "aria_label": null
+    },
+    "github": {
+      "url": "https://github.com/TryingOutSomething/sound_mode",
+      "aria_label": "Sound Mode Source Code"
+    },
+    "language": "dart"
+  }
+]

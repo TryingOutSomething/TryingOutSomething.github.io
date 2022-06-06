@@ -1,0 +1,9 @@
+{
+  "vue": "#2c3e50",
+  "node": "#f1e05a",
+  "javascript": "#f1e05a",
+  "python": "#3572a5",
+  "dart": "#00b4ab",
+  "flutter": "#00b4ab",
+  "default": "#c4c4c4"
+}
