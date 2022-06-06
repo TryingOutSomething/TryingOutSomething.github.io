@@ -1,13 +1,13 @@
 <template>
   <div
     class="bg-p-black flex flex-col
-    min-h-screen md:min-h-screen-80 xl:min-h-screen"
+    min-h-screen-50 lg:min-h-screen-50 xl:min-h-screen-75"
   >
     <nav-bar class="bg-p-black"/>
 
     <div
       class="flex flex-col items-center justify-center
-      h-screen md:h-screen-80 xl:h-screen"
+      min-h-screen-50 lg:min-h-screen-50 xl:min-h-screen-75"
     >
 
       <div class="text-center text-p-white">
@@ -29,13 +29,12 @@
 
         <div class="text-xl md:text-3xl lg:text-4xl">I'm Jan Owyeong!</div>
       </div>
-
-      <scroll-down
-        arrow-component-id="scrollArrow"
-        class="text-p-white flex justify-center mt-10 md:mt-32"
-        ellipse-component-id="ellipseWheel"
-      />
     </div>
+    <scroll-down
+      arrow-component-id="scrollArrow"
+      class="text-p-white flex justify-center mb-10"
+      ellipse-component-id="ellipseWheel"
+    />
   </div>
 </template>
 
