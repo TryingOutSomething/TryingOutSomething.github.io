@@ -4,14 +4,60 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'new-portfolio-site',
+    title: 'Jan Owyeong',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        property: 'og:description',
+        content: 'A portfolio website to showcase software projects that I developed on my own and collaborated with others.'
+      },
+      {
+        content: 'website',
+        property: 'og:type'
+      },
+      {
+        content: 'https://tryingoutsomething.github.io/',
+        property: 'og:url'
+      },
+      {
+        content: 'Jan Owyeong Guo Yong\'s Portfolio Website',
+        property: 'og:title'
+      },
+      {
+        content: 'https://tryingoutsomething.github.io/meta_image.jpg',
+        property: 'og:image'
+      },
+      {
+        content: 'Portfolio Website',
+        property: 'og:image:alt'
+      },
+      {
+        content: 'summary_large_page',
+        property: 'twitter:card'
+      },
+      {
+        content: 'https://tryingoutsomething.github.io/',
+        property: 'twitter:url'
+      },
+      {
+        name: 'description',
+        property: 'twitter:description',
+        content: 'A portfolio website to showcase software projects that I developed on my own and collaborated with others.'
+      },
+      {
+        content: 'Jan Owyeong Guo Yong\'s Portfolio Website',
+        property: 'twitter:title'
+      },
+      {
+        content: 'https://tryingoutsomething.github.io/meta_image.jpg',
+        property: 'twitter:image'
+      },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
