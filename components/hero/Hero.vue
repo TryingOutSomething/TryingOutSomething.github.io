@@ -1,15 +1,25 @@
 <template>
   <div
-    class="bg-p-black flex flex-col
-    min-h-screen-50 lg:min-h-screen-50 xl:min-h-screen-75"
+    class="
+      bg-p-black
+      flex flex-col
+      min-h-screen-50
+      lg:min-h-screen-50
+      xl:min-h-screen-75
+    "
   >
-    <nav-bar class="bg-p-black"/>
+    <nav-bar class="bg-p-black" />
 
     <div
-      class="flex flex-col items-center justify-center
-      min-h-screen-50 lg:min-h-screen-50 xl:min-h-screen-75"
+      class="
+        flex flex-col
+        items-center
+        justify-center
+        min-h-screen-50
+        lg:min-h-screen-50
+        xl:min-h-screen-75
+      "
     >
-
       <div class="text-center text-p-white">
         <div class="flex flex-col items-center justify-center sm:flex-row">
           <h1 class="mb-5 sm:mb-10 text-5xl md:text-7xl lg:text-8xl font-bold">
@@ -19,9 +29,7 @@
           <div
             id="handEmoji"
             ref="handEmoji"
-            class="mb-10
-            w-11 sm:w-24 lg:w-32
-            text-4xl md:text-7xl lg:text-8xl"
+            class="mb-10 w-11 sm:w-24 lg:w-32 text-4xl md:text-7xl lg:text-8xl"
           >
             👋🏻
           </div>
@@ -39,7 +47,7 @@
 </template>
 
 <script>
-import ScrollDown from '~/components/hero/svg/ScrollDown';
+import ScrollDown from '~/components/hero/svg/ScrollDown'
 
 export default {
   name: 'NuxtHero',
@@ -49,110 +57,143 @@ export default {
       emojiElementProps: {
         id: 'handEmoji',
         parentId: null,
-        animationClassName: 'wave-hand'
+        animationClassName: 'wave-hand',
       },
       ellipseProps: {
         id: 'ellipseWheel',
-        parentId: 'scrollIcon',
-        animationClassName: 'ellipse-wheel'
+        parentId: 'svgContainer',
+        animationClassName: 'ellipse-wheel',
       },
       ellipseSmallProps: {
         id: 'ellipseWheelSmall',
-        parentId: 'scrollIconSmall',
-        animationClassName: 'ellipse-wheel-small'
+        parentId: 'svgContainerSmall',
+        animationClassName: 'ellipse-wheel-small',
       },
       scrollArrowProps: {
         id: 'scrollArrow',
-        parentId: 'scrollIcon',
-        animationClassName: 'scroll-down-arrow'
+        parentId: 'svgContainer',
+        animationClassName: 'scroll-down-arrow',
       },
       scrollArrowSmallProps: {
         id: 'scrollArrowSmall',
-        parentId: 'scrollIconSmall',
-        animationClassName: 'scroll-down-arrow'
+        parentId: 'svgContainerSmall',
+        animationClassName: 'scroll-down-arrow',
       },
       observerOptions: {
         root: null,
         rootMargin: '0px',
-        threshold: 0.75
+        threshold: 0.75,
       },
-      observer: null
-    };
+      observer: null,
+    }
   },
   mounted() {
-    const observer = new IntersectionObserver(this.handleAnimationDisplay, this.observerOptions);
-    this.elementsToObserve().forEach(element => observer.observe(element));
+    const observer = new IntersectionObserver(
+      this.handleAnimationDisplay,
+      this.observerOptions
+    )
+    this.elementsToObserve().forEach((element) => observer.observe(element))
 
-    this.observer = observer;
+    this.observer = observer
   },
   beforeDestroy() {
-    this.observer.disconnect();
+    this.observer.disconnect()
   },
   methods: {
     elementsToObserve() {
-      const handEmojiElement = document.getElementById(this.emojiElementProps.id);
-      const scrollDownElement = document.getElementById(this.ellipseProps.parentId);
-      const scrollDownSmallElement = document.getElementById(this.ellipseSmallProps.parentId);
+      const handEmojiElement = document.getElementById(
+        this.emojiElementProps.id
+      )
+      const scrollDownElement = document.getElementById(
+        this.ellipseProps.parentId
+      )
+      const scrollDownSmallElement = document.getElementById(
+        this.ellipseSmallProps.parentId
+      )
 
-      return [
-        handEmojiElement,
-        scrollDownElement,
-        scrollDownSmallElement
-      ];
+      return [handEmojiElement, scrollDownElement, scrollDownSmallElement]
     },
     handleAnimationDisplay(entries, _) {
-      entries.forEach(entry => {
-        const element = entry.target;
+      entries.forEach((entry) => {
+        const element = entry.target
 
         if (entry.isIntersecting) {
-          this.addAnimationClassToElement(element);
+          this.addAnimationClassToElement(element)
         } else {
-          this.removeAnimationClassToElement(element);
+          this.removeAnimationClassToElement(element)
         }
-      });
+      })
     },
     addAnimationClassToElement(element) {
-      const id = element.id;
+      const id = element.id
 
       switch (id) {
         case this.emojiElementProps.id:
-          element.classList.add(this.emojiElementProps.animationClassName);
-          return;
+          element.classList.add(this.emojiElementProps.animationClassName)
+          return
         case this.ellipseProps.parentId:
-          this.addScrollDownAnimationGroupClass(element, this.scrollArrowProps, this.ellipseProps);
-          return;
+          this.addScrollDownAnimationGroupClass(
+            element,
+            this.scrollArrowProps,
+            this.ellipseProps
+          )
+          return
         case this.ellipseSmallProps.parentId:
-          this.addScrollDownAnimationGroupClass(element, this.scrollArrowSmallProps, this.ellipseSmallProps);
+          this.addScrollDownAnimationGroupClass(
+            element,
+            this.scrollArrowSmallProps,
+            this.ellipseSmallProps
+          )
       }
     },
-    addScrollDownAnimationGroupClass(parentElement, scrollArrowProps, ellipseProps) {
-      const scrollArrowElement = parentElement.querySelector(`#${scrollArrowProps.id}`);
-      const ellipseElement = parentElement.querySelector(`#${ellipseProps.id}`);
+    addScrollDownAnimationGroupClass(
+      parentElement,
+      scrollArrowProps,
+      ellipseProps
+    ) {
+      const scrollArrowElement = parentElement.querySelector(
+        `#${scrollArrowProps.id}`
+      )
+      const ellipseElement = parentElement.querySelector(`#${ellipseProps.id}`)
 
-      scrollArrowElement.classList.add(scrollArrowProps.animationClassName);
-      ellipseElement.classList.add(ellipseProps.animationClassName);
+      scrollArrowElement.classList.add(scrollArrowProps.animationClassName)
+      ellipseElement.classList.add(ellipseProps.animationClassName)
     },
     removeAnimationClassToElement(element) {
-      const id = element.id;
+      const id = element.id
 
       switch (id) {
         case this.emojiElementProps.id:
-          element.classList.remove(this.emojiElementProps.animationClassName);
-          return;
+          element.classList.remove(this.emojiElementProps.animationClassName)
+          return
         case this.ellipseProps.parentId:
-          this.removeScrollDownAnimationGroupClass(element, this.scrollArrowProps, this.ellipseProps);
-          return;
+          this.removeScrollDownAnimationGroupClass(
+            element,
+            this.scrollArrowProps,
+            this.ellipseProps
+          )
+          return
         case this.ellipseSmallProps.parentId:
-          this.removeScrollDownAnimationGroupClass(element, this.scrollArrowSmallProps, this.ellipseSmallProps);
+          this.removeScrollDownAnimationGroupClass(
+            element,
+            this.scrollArrowSmallProps,
+            this.ellipseSmallProps
+          )
       }
     },
-    removeScrollDownAnimationGroupClass(parentElement, scrollArrowProps, ellipseProps) {
-      const scrollArrowElement = parentElement.querySelector(`#${scrollArrowProps.id}`);
-      const ellipseElement = parentElement.querySelector(`#${ellipseProps.id}`);
+    removeScrollDownAnimationGroupClass(
+      parentElement,
+      scrollArrowProps,
+      ellipseProps
+    ) {
+      const scrollArrowElement = parentElement.querySelector(
+        `#${scrollArrowProps.id}`
+      )
+      const ellipseElement = parentElement.querySelector(`#${ellipseProps.id}`)
 
-      scrollArrowElement.classList.remove(scrollArrowProps.animationClassName);
-      ellipseElement.classList.remove(ellipseProps.animationClassName);
+      scrollArrowElement.classList.remove(scrollArrowProps.animationClassName)
+      ellipseElement.classList.remove(ellipseProps.animationClassName)
     },
-  }
-};
+  },
+}
 </script>

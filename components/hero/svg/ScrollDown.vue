@@ -14,28 +14,27 @@
 </template>
 
 <script>
-import ScrollIcon from '~/components/hero/svg/ScrollIcon';
-import ScrollIconSmall from '~/components/hero/svg/ScrollIconSmall';
+import ScrollIcon from '~/components/hero/svg/ScrollIcon'
+import ScrollIconSmall from '~/components/hero/svg/ScrollIconSmall'
 
 export default {
   name: 'ScrollDown',
   components: {
     ScrollIcon,
-    ScrollIconSmall
+    ScrollIconSmall,
   },
   props: {
     ellipseComponentId: {
       type: String,
-      required: true
+      required: true,
     },
     arrowComponentId: {
       type: String,
-      required: true
-    }
-  }
-};
+      required: true,
+    },
+  },
+}
 </script>
 
 <style scoped>
-
 </style>
