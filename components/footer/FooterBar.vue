@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-p-black">
+  <footer class="bg-p-black bottom-0">
     <mobile-footer
       :sns-links="snsLinks"
       :tools-icon-size="mobileToolsIconSize"
