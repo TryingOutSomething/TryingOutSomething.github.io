@@ -3,12 +3,12 @@
     <client-only>
       <div class="flex flex-row space-x-2.5 items-center justify-center">
         <div class="capitalize font-light">created with:</div>
-        <nuxt-icon/>
-        <tailwind-icon/>
+        <nuxt-icon title="Nuxt"/>
+        <tailwind-icon title="TailWind"/>
       </div>
     </client-only>
 
-    <div>© 2022 Jan Owyeong Guo Yong | Singapore, Singapore</div>
+    <div>{{ credits }} | {{ location }}</div>
 
     <client-only>
       <div class="flex flex-row space-x-2.5 items-center justify-center">
@@ -33,6 +33,14 @@ export default {
     snsLinks: {
       type: Object,
       required: true
+    },
+    credits: {
+      type: String,
+      default: ''
+    },
+    location: {
+      type: String,
+      default: ''
     }
   }
 };

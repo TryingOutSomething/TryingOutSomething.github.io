@@ -3,12 +3,18 @@
     <mobile-footer
       :sns-links="snsLinks"
       :tools-icon-size="mobileToolsIconSize"
+      :credits="credits"
+      :location="location"
       class="md:hidden
       flex flex-col justify-center items-center
       py-12 sm:py-5 px-5 sm:px-0"
     />
 
-    <desktop-footer :sns-links="snsLinks" class="hidden md:flex justify-between py-2.5 px-7 lg:px-20 items-center"/>
+    <desktop-footer
+      :credits="credits"
+      :location="location"
+      :sns-links="snsLinks"
+      class="hidden md:flex justify-between py-2.5 px-7 lg:px-20 items-center"/>
   </footer>
 </template>
 <script>
@@ -34,7 +40,9 @@ export default {
           ariaLabel: 'LinkedIn'
         }
       },
-      mobileToolsIconSize: 18
+      mobileToolsIconSize: 18,
+      credits: '© 2023 Jan Owyeong Guo Yong',
+      location: 'Singapore, Singapore'
     };
   }
 };

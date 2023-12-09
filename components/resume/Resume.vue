@@ -61,7 +61,7 @@ export default {
   data() {
     return {
       resumePdfPath: 'Jan_Owyeong_Guo_Yong_Resume.pdf',
-      resumeImagePath: `${require('~/assets/images/Jan_Owyeong_Guo_Yong_Resume_preview.jpg')}`,
+      resumeImagePath: `${require('~/assets/images/Jan_Owyeong_Guo_Yong_Resume_preview.PNG')}`,
       viewConfig: {
         toolbar: {
           title: false,

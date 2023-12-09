@@ -1,26 +1,36 @@
 <template>
-  <div id="about" class="bg-p-white flex min-h-screen flex-col items-center justify-center">
-    <div class="space-y-10 sm:space-y-24">
+  <div
+    id="about"
+    class="
+    bg-p-white
+    flex
+    flex-col
+    lg:h-screen
+    min-h-screen
+    items-center
+    justify-center"
+  >
+    <div class="space-y-10 sm:space-y-24 lg:space-y-14">
       <h1
         class="text-center uppercase font-black
-        text-4xl mt-20
-        sm:text-5xl md:mt-10"
+        text-4xl sm:text-5xl mt-10 sm:mt-0"
       >
         about me
       </h1>
 
-      <p class="px-12 sm:px-20 xl:px-72 2xl:px-96 sm:text-xl text-center sm:text-left">
-        I’m a computer science student at Nanyang Technological University
-        that does random projects during my free time. I love to try out new technologies that increase my work
-        productivity and reading blog articles about tech-related implementations. I am eager to gain practical
-        experience and apply the theory techniques learnt in school to build software.
+      <p class="px-12 sm:px-20 xl:px-72 2xl:px-80 sm:text-xl text-center sm:text-left">
+        I am a computer science graduate from Nanyang Technological University with almost two years of work experience.
+        I engage in various projects during my free time. I love exploring new technologies to enhance my work
+        productivity and enjoy reading blog articles about tech-related implementations. I am eager to gain practical
+        experience and apply the theoretical techniques I learned during my studies to build software in my professional
+        role.
       </p>
 
       <div class="px-12 sm:px-20 xl:px-80 2xl:px-128">
         <h2 class="my-10 text-xl sm:text-2xl text-center sm:text-left font-bold">Skills accumulated:</h2>
 
         <div
-          class="mb-24 lg:mb-0 xl:mb-5 2xl:mb-0
+          class="mb-10 lg:mb-0 xl:mb-5 2xl:mb-0
           grid place-items-center gap-3
           grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6"
         >

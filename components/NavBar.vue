@@ -35,7 +35,7 @@
             <div class="flex space-x-4">
               <a
                 v-for="(item, i) in navItems" :key="i"
-                class="rounded-md  px-3 py-2 text-sm font-medium text-p-white hover:bg-gray-700"
+                class="rounded-md px-3 py-2 text-sm font-medium text-p-white hover:bg-gray-700"
                 :href="generateLocalHref(item)">
                 {{ generateName(item) }}
               </a>
@@ -46,7 +46,7 @@
     </div>
     <!-- Mobile menu, show/hide based on menu state. -->
     <div v-if="showMenuMobile" id="mobile-menu" class="flex justify-center sm:hidden">
-      <div class="space-y-1 px-2 pt-2 pb-3">
+      <div class="space-y-1 px-2 pt-2 pb-3 text-center">
         <a
           v-for="(item, i) in navItems" :key="i"
           class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"

@@ -3,9 +3,7 @@
     class="
       bg-p-black
       flex flex-col
-      min-h-screen-50
-      lg:min-h-screen-50
-      xl:min-h-screen-75
+      h-screen
     "
   >
     <nav-bar class="bg-p-black" />
@@ -15,9 +13,7 @@
         flex flex-col
         items-center
         justify-center
-        min-h-screen-50
-        lg:min-h-screen-50
-        xl:min-h-screen-75
+        h-screen
       "
     >
       <div class="text-center text-p-white">
@@ -47,7 +43,7 @@
 </template>
 
 <script>
-import ScrollDown from '~/components/hero/svg/ScrollDown'
+import ScrollDown from '~/components/hero/svg/ScrollDown';
 
 export default {
   name: 'NuxtHero',
