@@ -1,7 +1,7 @@
 [
   {
     "project_name": "Github Repo Viewer",
-    "description": "View trending repositories built by developers on Github using Vue3's Composition API.",
+    "description": "Explore trending repositories crafted by developers on GitHub utilizing Vue 3's Composition API.",
     "demo": {
       "url": "https://5f3546afd1ccbb70569b5a74--focused-cray-9a652d.netlify.app/",
       "aria_label": "Github Repo Viewer"
@@ -14,7 +14,7 @@
   },
   {
     "project_name": "Zoomba",
-    "description": "This project contains a demo of the landing page and admin CMS dashboard for Zoomba, a motion tracking desktop game.",
+    "description": "This project features a demo of the landing page and admin CMS dashboard for Zoomba, a motion tracking desktop game created as part of a school assignment.",
     "demo": {
       "url": "https://tryingoutsomething.github.io/Zoomba/",
       "aria_label": "Zoomba Web App"
@@ -27,7 +27,7 @@
   },
   {
     "project_name": "Car park Finder",
-    "description": "A mobile application that finds the nearest car park from your current location and displays the number of available lots for that car park.",
+    "description": "A React Native mobile application designed to locate the nearest car park from your current location and provide information on the number of available parking spaces for that specific car park.",
     "demo": {
       "url": null,
       "aria_label": null
@@ -40,7 +40,7 @@
   },
   {
     "project_name": "Multi-Disciplinary Project",
-    "description": "A project to build a robot that navigates a maze. This repository contains the algorithm implementation for the robot.",
+    "description": "This project involves constructing a maze-navigating robot. The repository includes the algorithm implementation for controlling the robot's movements.",
     "demo": {
       "url": null,
       "aria_label": null
@@ -53,7 +53,7 @@
   },
   {
     "project_name": "CCA Web Scraper",
-    "description": "An automated web scrapper that scrapes the Co-Curricular Activities (CCA) from Ngee Ann Polytechnic’s website",
+    "description": "An automated web scraper designed to extract Co-Curricular Activities (CCA) information from Ngee Ann Polytechnic's website.",
     "demo": {
       "url": null,
       "aria_label": null
@@ -66,7 +66,7 @@
   },
   {
     "project_name": "Snapee Bot",
-    "description": "A Telegram bot service that allows users to manage and spend retail and restaurant vouchers earned by playing games and doing tasks.",
+    "description": "A Telegram bot enabling users to manage and redeem retail and restaurant vouchers earned through gaming and task completion.",
     "demo": {
       "url": null,
       "aria_label": null
@@ -79,7 +79,7 @@
   },
   {
     "project_name": "Match In A Snap",
-    "description": "A website that recommends food places base on user's preference and their location.",
+    "description": "A website that suggests food establishments based on user preferences and their current location.",
     "demo": {
       "url": "https://tryingoutsomething.github.io/match-in-a-snap/",
       "aria_label": "Match In A Snap"
@@ -92,7 +92,7 @@
   },
   {
     "project_name": "Sound Mode",
-    "description": "A dart/flutter plugin to manage device's sound mode",
+    "description": "A Flutter plugin designed to control and manage the sound mode of a device.",
     "demo": {
       "url": null,
       "aria_label": null
