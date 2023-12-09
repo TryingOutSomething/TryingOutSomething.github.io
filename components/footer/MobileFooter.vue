@@ -20,11 +20,11 @@
     </client-only>
 
     <div class="sm:hidden">
-      <div class="text-center text-sm mb-1">© 2022 Jan Owyeong Guo Yong</div>
-      <div class="text-center text-sm">Singapore, Singapore</div>
+      <div class="text-center text-sm mb-1">{{ credits }}</div>
+      <div class="text-center text-sm">{{ location }}</div>
     </div>
 
-    <div class="text-center text-sm hidden sm:block">© 2022 Jan Owyeong Guo Yong | Singapore, Singapore</div>
+    <div class="text-center text-sm hidden sm:block">{{ credits }} | {{ location }}</div>
 
     <client-only>
       <div class="mt-5 sm:mt-3 text-xs flex flex-row items-center justify-center space-x-2">
@@ -48,6 +48,14 @@ export default {
     toolsIconSize: {
       type: Number,
       default: 24
+    },
+    credits: {
+      type: String,
+      default: ''
+    },
+    location: {
+      type: String,
+      default: ''
     }
   }
 };

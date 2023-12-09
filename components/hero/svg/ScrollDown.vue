@@ -3,7 +3,7 @@
     <scroll-icon
       :arrow-component-id="arrowComponentId"
       :ellipse-component-id="ellipseComponentId"
-      class="hidden md:block"
+      class="hidden md:w-8 lg:w-auto md:flex md:justify-center"
     />
     <scroll-icon-small
       :arrow-component-id="`${arrowComponentId}Small`"
@@ -14,8 +14,8 @@
 </template>
 
 <script>
-import ScrollIcon from '~/components/hero/svg/ScrollIcon'
-import ScrollIconSmall from '~/components/hero/svg/ScrollIconSmall'
+import ScrollIcon from '~/components/hero/svg/ScrollIcon';
+import ScrollIconSmall from '~/components/hero/svg/ScrollIconSmall';
 
 export default {
   name: 'ScrollDown',
