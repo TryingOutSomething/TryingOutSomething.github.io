@@ -41,7 +41,7 @@ export default {
         }
       },
       mobileToolsIconSize: 18,
-      credits: '© 2023 Jan Owyeong Guo Yong',
+      credits: '© 2024 Jan Owyeong Guo Yong',
       location: 'Singapore, Singapore'
     };
   }
